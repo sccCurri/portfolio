@@ -165,6 +165,7 @@ body {
   width: 241px;
   height: 1px;
   top: 256px;
+  background: rgba(34, 36, 37, 0.2);
 }
 .skill-title {
   position: absolute;
@@ -374,4 +375,59 @@ body {
   font-size: 14.5px;
   letter-spacing: 0;
   line-height: normal;
+}
+.intro-row-line {
+  position: absolute;
+  width: 999px;
+  height: 1px;
+  top: 56px;
+  left: 0;
+  background: #222425;
+}
+.intro-column-line {
+  position: absolute;
+  width: 1px;
+  height: 471px;
+  top: 0;
+  left: 578px;
+  background: #222425;
+}
+.experience-div {
+  position: absolute;
+  width: 999px;
+  height: 356px;
+  top: 596px;
+  left: 382px;
+}
+.experience-title {
+  position: absolute;
+  width: 999px;
+  height: 356px;
+  left: 11px;
+}
+.experience-img {
+  width: 27px;
+  height: 22px;
+  top: 4px;
+  position: absolute;
+  left: 0;
+}
+.experience-text {
+  position: absolute;
+  width: 167px;
+  top: 0;
+  left: 35px;
+  font-family: "RixRak-Sans_Pro-Bold", Helvetica;
+  font-weight: 700;
+  color: #1d1f20;
+  font-size: 23.1px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+.experience-prev {
+  position: absolute;
+  width: 36px;
+  height: 72px;
+  top: 166px;
+  left: 11px;
 }
