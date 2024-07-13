@@ -1,13 +1,16 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
 * {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
+
 html,
 body {
   margin: 0px;
   height: 100%;
 }
+
 .background {
   background-color: #ffffff;
   display: flex;
@@ -15,12 +18,14 @@ body {
   justify-content: center;
   width: 100%;
 }
+
 .frame {
   background-color: #ffffff;
   width: 1440px;
   height: 1959px;
   position: relative;
 }
+
 .side-bar {
   position: absolute;
   width: 313px;
@@ -32,6 +37,7 @@ body {
   overflow: hidden;
   box-shadow: 0px 4.01px 20.06px #00000033;
 }
+
 .side-bar-logo {
   position: absolute;
   width: 241px;
@@ -39,6 +45,7 @@ body {
   top: 37px;
   left: 36px;
 }
+
 .side-bar-profile {
   position: absolute;
   width: 241px;
@@ -50,6 +57,7 @@ body {
   overflow: hidden;
   box-shadow: 0px 0px 10.75px #00000040;
 }
+
 .side-bar-profile-picture {
   position: absolute;
   width: 241px;
@@ -59,6 +67,7 @@ body {
   object-fit: cover;
   background: url("image/profile_image.png") lightgray 50% / cover no-repeat;
 }
+
 .name-tag {
   position: absolute;
   width: 245px;
@@ -66,6 +75,7 @@ body {
   top: 379px;
   left: 36px;
 }
+
 .name {
   position: absolute;
   width: 241px;
@@ -101,13 +111,15 @@ body {
   top: 523px;
   left: 36px;
 }
+
 .info-detail {
-  position: absolute;
-  width: 242px;
+  position: relative;
+  /* width: 242px;
   height: 16px;
   top: 0;
-  left: 0;
+  left: 0; */
 }
+
 .info-detail-icon {
   position: absolute;
   width: 16px;
@@ -115,6 +127,7 @@ body {
   top: 0;
   left: 0;
 }
+
 .info-detail-exp {
   position: absolute;
   width: 215px;
@@ -127,12 +140,14 @@ body {
   letter-spacing: 0;
   line-height: normal;
 }
+
 .strength-div {
   position: absolute;
   width: 239px;
   height: 92px;
   top: 135px;
 }
+
 .strength {
   position: absolute;
   width: 72px;
@@ -140,6 +155,7 @@ body {
   top: 0;
   left: 0;
 }
+
 .strength-text {
   position: absolute;
   width: 70px;
@@ -153,6 +169,7 @@ body {
   letter-spacing: 0;
   line-height: normal;
 }
+
 .strength-img {
   position: absolute;
   width: 70px;
@@ -160,6 +177,7 @@ body {
   top: 0;
   left: 0;
 }
+
 .line {
   position: absolute;
   width: 241px;
@@ -167,12 +185,17 @@ body {
   top: 256px;
   background: rgba(34, 36, 37, 0.2);
 }
-.skill-title {
+
+.skills {
   position: absolute;
   width: 241px;
-  height: 16px;
   top: 288px;
 }
+
+.skill-title {
+  position: relative;
+}
+
 .skill-title-text {
   position: absolute;
   width: 216px;
@@ -185,6 +208,7 @@ body {
   letter-spacing: 0;
   line-height: normal;
 }
+
 .skill-title-img {
   width: 13px;
   height: 13px;
@@ -192,12 +216,14 @@ body {
   position: absolute;
   left: 0;
 }
+
 .skill-set {
-  position: absolute;
+  position: relative;
   width: 243px;
-  height: 245px;
-  top: 323px;
+  /* height: 245px;
+  top: 323px; */
 }
+
 .point {
   position: absolute;
   width: 7px;
@@ -207,6 +233,7 @@ body {
   background-color: #222425;
   border-radius: 3.45px;
 }
+
 .skill-text {
   position: absolute;
   width: 170px;
@@ -219,6 +246,7 @@ body {
   letter-spacing: 0;
   line-height: normal;
 }
+
 .skill-bar {
   position: absolute;
   width: 233px;
@@ -229,12 +257,14 @@ body {
   border-radius: 9.41px;
   box-shadow: 0px 1.25px 3.95px #00000026;
 }
+
 .skill-bar-progress {
   position: relative;
   width: 115px;
   height: 14px;
   left: 7px;
 }
+
 .skill-bar-rectangle {
   position: absolute;
   width: 110px;
@@ -244,6 +274,7 @@ body {
   background-color: #222425;
   border-radius: 8.15px;
 }
+
 .skill-bar-o1 {
   position: absolute;
   width: 14px;
@@ -254,6 +285,7 @@ body {
   border-radius: 6.9px;
   box-shadow: 0px 0px 2.51px #00000026;
 }
+
 .skill-bar-o2 {
   position: absolute;
   width: 8px;
@@ -263,6 +295,7 @@ body {
   background-color: #222425;
   border-radius: 3.76px;
 }
+
 /*생략*/
 .intro-div {
   position: absolute;
@@ -273,16 +306,16 @@ body {
   border-radius: 15.04px;
   overflow: hidden;
   box-shadow: 0px 4.01px 20.06px #00000033;
-  background: linear-gradient(
-    180deg,
-    rgba(34, 36, 37, 0) 0%,
-    rgba(34, 36, 37, 0.2) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(34, 36, 37, 0) 0%,
+      rgba(34, 36, 37, 0.2) 100%);
 }
+
 .intro-frame {
   position: relative;
   height: 471px;
 }
+
 .intro-logo {
   position: absolute;
   opacity: 20%;
@@ -291,6 +324,7 @@ body {
   top: 261px;
   left: 126px;
 }
+
 .intro-picture-frame {
   position: absolute;
   width: 356px;
@@ -299,6 +333,7 @@ body {
   left: 579px;
   background-color: #ffffff;
 }
+
 .intro-picture {
   position: absolute;
   width: 356px;
@@ -307,6 +342,7 @@ body {
   left: 0;
   object-fit: cover;
 }
+
 .intro-star {
   position: absolute;
   width: 104px;
@@ -314,6 +350,7 @@ body {
   top: 72px;
   left: 526px;
 }
+
 .intro-content {
   position: absolute;
   width: 465px;
@@ -321,6 +358,7 @@ body {
   top: 118px;
   left: 52px;
 }
+
 .intro-quote {
   position: absolute;
   width: 50px;
@@ -328,6 +366,7 @@ body {
   top: 0;
   left: 0;
 }
+
 .intro-text {
   position: absolute;
   width: 461px;
@@ -340,6 +379,7 @@ body {
   letter-spacing: 0;
   line-height: normal;
 }
+
 .intro-text-detail {
   position: absolute;
   width: 461px;
@@ -365,6 +405,7 @@ body {
   justify-content: center;
   background-color: #222425;
 }
+
 .intro-contact-text {
   position: relative;
   width: fit-content;
@@ -376,6 +417,7 @@ body {
   letter-spacing: 0;
   line-height: normal;
 }
+
 .intro-row-line {
   position: absolute;
   width: 999px;
@@ -384,6 +426,7 @@ body {
   left: 0;
   background: #222425;
 }
+
 .intro-column-line {
   position: absolute;
   width: 1px;
@@ -392,6 +435,7 @@ body {
   left: 578px;
   background: #222425;
 }
+
 .experience-div {
   position: absolute;
   width: 999px;
@@ -399,12 +443,14 @@ body {
   top: 596px;
   left: 382px;
 }
+
 .experience-title {
   position: absolute;
   width: 999px;
   height: 356px;
   left: 11px;
 }
+
 .experience-img {
   width: 27px;
   height: 22px;
@@ -412,6 +458,7 @@ body {
   position: absolute;
   left: 0;
 }
+
 .experience-text {
   position: absolute;
   width: 167px;
@@ -424,6 +471,7 @@ body {
   letter-spacing: 0;
   line-height: normal;
 }
+
 .experience {
   position: absolute;
   width: 36px;
@@ -431,6 +479,7 @@ body {
   top: 166px;
   left: 11px;
 }
+
 .experience-card-frame {
   position: absolute;
   width: 315px;
