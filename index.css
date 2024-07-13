@@ -186,14 +186,21 @@ body {
   background: rgba(34, 36, 37, 0.2);
 }
 
-.skills {
+.skill-wrap {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   width: 241px;
+  height: 600px;
   top: 288px;
 }
 
 .skill-title {
   position: relative;
+  width: 100%;
+  margin-bottom: 40px;
 }
 
 .skill-title-text {
@@ -212,16 +219,20 @@ body {
 .skill-title-img {
   width: 13px;
   height: 13px;
-  top: 2px;
   position: absolute;
   left: 0;
+  top: 2px;
+}
+
+.skill-item {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .skill-set {
   position: relative;
-  width: 243px;
-  /* height: 245px;
-  top: 323px; */
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .point {
@@ -248,14 +259,12 @@ body {
 }
 
 .skill-bar {
-  position: absolute;
   width: 233px;
   height: 14px;
-  top: 349px;
-  left: 0;
   background-color: #ffffff;
   border-radius: 9.41px;
   box-shadow: 0px 1.25px 3.95px #00000026;
+  margin-top: 20px;
 }
 
 .skill-bar-progress {
