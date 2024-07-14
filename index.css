@@ -23,19 +23,20 @@ html {
 .frame {
   background-color: #ffffff;
   width: 1440px;
-  height: 1458px;
+  height: auto; /* 내용에 따라 자동으로 높이 조절 */
   position: relative;
 }
 
 .side-bar {
   position: absolute;
   width: 312px;
-  height: 1418px;
+  height: auto; /* 내용에 따라 자동으로 높이 조절 */
   top: 20px;
   left: 20px;
   background-color: #f5f5f5;
   border-radius: 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-bottom: 30px; /* 하단 여백 추가 */
 }
 
 .side-bar-logo {
@@ -61,7 +62,7 @@ html {
   width: 240px;
   height: 240px;
   object-fit: cover;
-  object-position: center 10%; /*사진 위아래로 조절하기*/
+  object-position: center 30%; /* Added this line */
   border-radius: 120px;
   transform: scale(1.2); /* Added this line */
 }
@@ -224,8 +225,17 @@ html {
   width: 7px;
   height: 7px;
   background-color: #222425;
-  border-radius: 3.45px;
+  border-radius: 3.69px;
   margin-right: 8px;
+}
+
+.point-1 {
+  margin-right: 8px;
+}
+
+.point-2 {
+  top: 4px;
+  left: 0;
 }
 
 .skill-text {
@@ -281,6 +291,122 @@ html {
   border-radius: 3.76px;
 }
 
+.license-div {
+  position: relative;
+  width: 241px;
+  margin-top: 30px; /* line과의 간격 */
+  margin-left: 36px;
+}
+
+.license-img {
+  width: 16px;
+  height: 11px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.license-title {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 7px;
+  font-family: "RixRak-Sans_Pro-Regular", Helvetica;
+  font-weight: 400;
+  color: #5f666b;
+  font-size: 11.3px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.license-wrap {
+  position: relative;
+  width: 241px;
+  margin-top: 20px; /* license-title과의 간격 */
+}
+
+.license-content {
+  position: relative;
+  width: 100%;
+  height: 39px;
+  background-color: #22242533;
+  border-radius: 5px;
+  border: 2px solid;
+  border-color: #222425;
+  margin-bottom: 5px; /* 각 license-content 사이의 간격 */
+}
+
+.license-text {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-family: "RixRak-Sans_Pro-Bold", Helvetica;
+  font-weight: 700;
+  color: #1d1f20;
+  font-size: 12.5px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.education-div {
+  position: relative;
+  width: 241px;
+  margin-top: 30px; /* license-div와의 간격 */
+  margin-left: 36px;
+}
+
+.education-title {
+  position: relative;
+  width: 100%;
+  height: 15px;
+  margin-bottom: 20px;
+}
+
+.education-text {
+  position: absolute;
+  width: 216px;
+  top: 0;
+  left: 25px;
+  font-family: "RixRak-Sans_Pro-Regular", Helvetica;
+  font-weight: 400;
+  color: #5f666b;
+  font-size: 11.2px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.education-img {
+  position: absolute;
+  width: 15px;
+  height: 11px;
+  top: 2px;
+  left: 0;
+}
+
+.education-content {
+  position: relative;
+  width: 100%;
+}
+
+.education-name {
+  width: 100%;
+  font-family: "RixRak-Sans_Pro-Bold", Helvetica;
+  font-weight: 700;
+  color: #1d1f20;
+  font-size: 16.4px;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+.education-detail {
+  width: 100%;
+  font-family: "RixRak-Sans_Pro-Regular", Helvetica;
+  font-weight: 400;
+  color: #5f666b;
+  font-size: 11.2px;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
 .main-content {
   position: absolute;
   width: 1127px;
@@ -290,6 +416,7 @@ html {
   background-color: #ffffff;
   border-radius: 50px 0px 0px 0px;
 }
+
 .intro-div {
   position: absolute;
   width: 999px;
@@ -432,33 +559,25 @@ html {
 }
 
 .experience-div {
-  position: absolute;
+  position: relative;
   width: 999px;
-  height: 356px;
-  top: 596px;
-  left: 382px;
+  margin-top: 596px;
+  margin-left: 382px;
 }
 
 .experience-title {
-  position: absolute;
-  width: 999px;
-  height: 356px;
-  left: 11px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .experience-img {
   width: 27px;
   height: 22px;
-  top: 4px;
-  position: absolute;
-  left: 0;
+  margin-right: 8px;
 }
 
 .experience-text {
-  position: absolute;
-  width: 167px;
-  top: 0;
-  left: 35px;
   font-family: "RixRak-Sans_Pro-Bold", Helvetica;
   font-weight: 700;
   color: #1d1f20;
@@ -467,45 +586,135 @@ html {
   line-height: normal;
 }
 
-.experience {
-  position: absolute;
-  width: 36px;
-  height: 72px;
-  top: 166px;
-  left: 11px;
+.experience-cards-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: visible;
 }
 
 .experience-card-frame {
-  position: absolute;
-  width: 315px;
-  height: 292px;
-  top: 47px;
-  left: 341px;
-  background-color: #22242533;
-  border-radius: 13.44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px; /* 카드 사이의 간격을 24px로 설정 */
+  position: relative;
+  width: 993px; /* 3개의 카드와 간격을 포함한 전체 너비 */
 }
 
 .experience-card {
+  flex: 0 0 auto;
+  width: 315px;
+  height: 271px;
+  scroll-snap-align: center;
+  position: relative;
+  border-radius: 13.443px;
+  background: rgba(34, 36, 37, 0.2);
+  padding: 21px 0 0 0; /* 상단 패딩만 유지 */
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.experience-card:not(:nth-child(2)) {
+  transform: scale(0.75);
+  opacity: 0.3;
+}
+
+.experience-card:first-child {
+  transform-origin: left center;
   position: absolute;
+  right: 0;
+}
+
+.experience-card:last-child {
+  transform-origin: right center;
+  position: absolute;
+  left: 0;
+}
+
+.experience-prev,
+.experience-next {
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.experience-prev {
+  left: -30px;
+}
+
+.experience-next {
+  right: -30px;
+}
+
+.experience-card-period-wrapper {
   width: 54px;
   height: 14px;
-  top: 21px;
-  left: 131px;
-  background-color: #222425;
   border-radius: 7px;
+  background: #222425;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 7px; /* 아래쪽 마진으로 company와의 간격 유지 */
 }
 
 .experience-card-period {
-  height: 9px;
-  top: 2px;
-  left: 6px;
   font-family: "NanumSquareOTF-Regular", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 7.8px;
   line-height: normal;
   white-space: nowrap;
+  letter-spacing: 0;
+}
+
+.experience-card-company {
+  width: 100%;
+  text-align: center;
+  font-family: "NanumSquareOTF-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #1d1f20;
+  font-size: 24.2px;
+  line-height: normal;
+  letter-spacing: 0;
+}
+
+.experience-card-term {
+  width: 100%;
+  text-align: center;
+  color: #5f666b;
+  font-size: 11.1px;
+  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: 5px;
+}
+
+.experience-card-team {
   position: absolute;
+  width: 113px;
+  height: 20px;
+  top: 107px;
+  left: 33px;
+  background-color: #222425;
+  border-radius: 13.09px;
+}
+
+.experience-card-team-name {
+  position: absolute;
+  top: 2px;
+  left: 12px;
+  font-family: "NanumSquareOTF-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: normal;
+  white-space: nowrap;
   letter-spacing: 0;
 }
 
@@ -520,6 +729,7 @@ html {
 }
 
 .experience-card-project-name {
+  position: absolute;
   top: 2px;
   left: 17px;
   font-family: "NanumSquareOTF-Bold", Helvetica;
@@ -528,81 +738,19 @@ html {
   font-size: 12px;
   line-height: normal;
   white-space: nowrap;
-  position: absolute;
   letter-spacing: 0;
-}
-
-.experience-card-team {
-  position: absolute;
-  width: 113px;
-  height: 20px;
-  top: 107px;
-  left: 33px;
-  background-color: #222425;
-  border-radius: 13.09px;
-}
-
-.experience-card-team-name {
-  top: 2px;
-  left: 12px;
-  font-family: "NanumSquareOTF-Bold", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 12px;
-  line-height: normal;
-  white-space: nowrap;
-  position: absolute;
-  letter-spacing: 0;
-}
-
-.experience-card-company {
-  width: 271px;
-  top: 42px;
-  left: 22px;
-  font-family: "NanumSquareOTF-ExtraBold", Helvetica;
-  font-weight: 800;
-  color: #1d1f20;
-  font-size: 24.2px;
-  text-align: center;
-  line-height: normal;
-  position: absolute;
-  letter-spacing: 0;
-}
-
-.experience-card-term {
-  width: 271px;
-  top: 76px;
-  left: 22px;
-  color: #5f666b;
-  font-size: 11.1px;
-  text-align: center;
-  position: absolute;
-  font-family: "NanumSquareOTF-Regular", Helvetica;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
 .experience-card-task {
   position: absolute;
-  width: 262px;
+  width: 249px;
   height: 19px;
   top: 138px;
   left: 33px;
 }
 
-.point-2 {
-  width: 7px;
-  height: 7px;
-  top: 4px;
-  border-radius: 3.69px;
-  position: absolute;
-  left: 0;
-  background-color: #222425;
-}
-
 .experience-card-task-text {
-  width: 242px;
+  width: 229px;
   height: 19px;
   top: 0;
   left: 18px;
@@ -616,7 +764,7 @@ html {
 }
 
 .experience-card-task-term {
-  width: 215px;
+  width: 202px;
   top: 203px;
   left: 33px;
   color: #222425;
@@ -631,31 +779,19 @@ html {
 
 .experience-card-task-detail {
   position: absolute;
-  width: 262px;
+  width: 249px;
   height: 20px;
   top: 227px;
   left: 33px;
-}
-
-.point-3 {
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  top: 5px;
-  left: 0;
-  background-color: #222425;
-  border-radius: 3.69px;
+  display: flex;
+  align-items: center;
 }
 
 .experience-card-task-detail-text {
-  position: absolute;
-  width: 242px;
-  top: 0;
-  left: 18px;
-  font-family: "RixRak-Sans_Pro-Regular", Helvetica;
+  font-family: "NanumSquareOTF-Regular", Helvetica;
   font-weight: 400;
   color: #1d1f20;
   font-size: 12px;
-  letter-spacing: 0;
   line-height: normal;
+  letter-spacing: 0;
 }
