@@ -62,8 +62,8 @@ html {
   width: 240px;
   height: 240px;
   object-fit: cover;
-  object-position: center 30%; /* Added this line */
   border-radius: 120px;
+  object-position: center 0%; /* Added this line */
   transform: scale(1.2); /* Added this line */
 }
 
@@ -453,6 +453,7 @@ html {
   height: 356px;
   top: 0;
   left: 0;
+  object-position: center 20%; /* Added this line */
   object-fit: cover;
 }
 
