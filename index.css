@@ -229,15 +229,6 @@ html {
   margin-right: 8px;
 }
 
-.point-1 {
-  margin-right: 8px;
-}
-
-.point-2 {
-  top: 4px;
-  left: 0;
-}
-
 .skill-text {
   font-family: "RixRak-Sans_Pro-Bold", Helvetica;
   font-weight: 700;
@@ -601,7 +592,7 @@ html {
   justify-content: center;
   gap: 24px; /* 카드 사이의 간격을 24px로 설정 */
   position: relative;
-  width: 993px; /* 3개의 카드와 간격을 포함한 전체 너비 */
+  width: 993px; /* 3개의 카드 ���을 포함한 전체 너비 */
 }
 
 .experience-card {
@@ -612,7 +603,7 @@ html {
   position: relative;
   border-radius: 13.443px;
   background: rgba(34, 36, 37, 0.2);
-  padding: 21px 0 0 0; /* 상단 패딩만 유지 */
+  padding: 21px 0 0 0;
   overflow: hidden;
   transition: all 0.3s ease;
 }
@@ -793,5 +784,148 @@ html {
   color: #1d1f20;
   font-size: 12px;
   line-height: normal;
+  letter-spacing: 0;
+}
+
+.project-div {
+  position: relative;
+  width: 999px;
+  margin-top: 50px;
+  margin-left: 382px;
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.project-title-img {
+  width: 25px;
+  height: 25px;
+  margin-right: 9px;
+}
+
+.project-title-text {
+  font-family: "RixRak-Sans_Pro-Bold", Helvetica;
+  font-weight: 700;
+  color: #1d1f20;
+  font-size: 23.1px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 27px;
+}
+
+.project {
+  width: 486px;
+  height: 408px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project-main-img {
+  width: 486px;
+  height: 288px;
+  background-color: #222425;
+  border-radius: 15.04px 15.04px 0px 0px;
+}
+
+.project-content {
+  width: 486px;
+  height: 120px;
+  border-radius: 0px 0px 15.04px 15.04px;
+  border: 2.01px solid #222425;
+  padding: 20px 26px;
+}
+
+.project-content-title {
+  font-family: "NanumSquareOTF-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #1d1f20;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.project-content-text {
+  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-weight: 400;
+  color: #5f666b;
+  font-size: 11.1px;
+  line-height: 20.1px;
+  letter-spacing: 0;
+}
+
+.project-title-img {
+  width: 25px;
+  height: 25px;
+  margin-right: 9px;
+}
+
+.project-title-text {
+  font-family: "RixRak-Sans_Pro-Bold", Helvetica;
+  font-weight: 700;
+  color: #1d1f20;
+  font-size: 23.1px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 27px;
+}
+
+.project {
+  width: 486px;
+  height: 408px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project-main-img {
+  width: 486px;
+  height: 288px;
+  background-color: #222425;
+  border-radius: 15.04px 15.04px 0px 0px;
+}
+
+.project-content {
+  width: 486px;
+  height: 120px;
+  border-radius: 0px 0px 15.04px 15.04px;
+  border: 2.01px solid #222425;
+  padding: 20px 26px;
+}
+
+.project-content-title {
+  font-family: "NanumSquareOTF-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #1d1f20;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.project-content-text {
+  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-weight: 400;
+  color: #5f666b;
+  font-size: 11.1px;
+  line-height: 20.1px;
   letter-spacing: 0;
 }
