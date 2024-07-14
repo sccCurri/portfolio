@@ -212,10 +212,13 @@
             <div class="experience-text">EXPERIENCE</div>
           </div>
           <div class="experience-cards-container">
-            <img class="experience-prev" src="image/prev.svg" />
+            <img
+              class="experience-prev"
+              src="image/prev.svg"
+              onclick="moveCards('prev')"
+            />
             <div class="experience-card-frame">
-              <!-- 왼쪽 카드 -->
-              <div class="experience-card">
+              <div id="card1" class="experience-card">
                 <div class="experience-card-period-wrapper">
                   <div class="experience-card-period">왼쪽</div>
                 </div>
@@ -241,8 +244,7 @@
                   </div>
                 </div>
               </div>
-              <!-- 중앙 카드 -->
-              <div class="experience-card">
+              <div id="card2" class="experience-card">
                 <div class="experience-card-period-wrapper">
                   <div class="experience-card-period">00년 00개월</div>
                 </div>
@@ -268,8 +270,7 @@
                   </div>
                 </div>
               </div>
-              <!-- 오른쪽 카드 -->
-              <div class="experience-card">
+              <div id="card3" class="experience-card">
                 <div class="experience-card-period-wrapper">
                   <div class="experience-card-period">00년 00개월</div>
                 </div>
@@ -296,7 +297,11 @@
                 </div>
               </div>
             </div>
-            <img class="experience-next" src="image/next.svg" />
+            <img
+              class="experience-next"
+              src="image/next.svg"
+              onclick="moveCards('next')"
+            />
           </div>
         </div>
         <div class="project-div">
@@ -321,7 +326,7 @@
               <div class="project-content">
                 <div class="project-content-title">프로젝트명</div>
                 <p class="project-content-text">
-                  프로젝트 설명 짧은 설명 프로젝트 설명 짧은 설명 프로젝트 설명
+                  프로젝트 설명 짧은 설명 프젝트 설명 짧은 설명 프로젝트 설명
                   짧은 설명<br />프로젝트 설명 짧은 설명 프로젝트 설명 짧은 설명
                   프로젝트 설명 짧은 설명
                 </p>

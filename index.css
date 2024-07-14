@@ -51,20 +51,23 @@ html {
   position: relative;
   width: 240px;
   height: 240px;
-  margin-top: 30px;
+  margin-top: 40px; /* 30px에서 40px로 변경하여 아래로 내림 */
   margin-left: 36px;
   background-color: #d9d9d9;
   border-radius: 120px;
-  overflow: hidden; /* Added this line */
+  overflow: hidden;
 }
 
 .side-bar-profile-picture {
-  width: 240px;
-  height: 240px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 120px;
-  object-position: center 0%; /* Added this line */
-  transform: scale(1.2); /* Added this line */
+  transform: scale(1.1) translateY(5%); /* 1.1배 확대하고 약간 아래로 이동 */
+  transition: transform 0.3s ease; /* 부드러운 변화를 위한 트랜지션 추가 */
+}
+
+.side-bar-profile:hover .side-bar-profile-picture {
+  transform: scale(1.15) translateY(2%); /* 호버 시 약간 더 확대 */
 }
 
 .name-tag {
@@ -580,67 +583,61 @@ html {
 
 .experience-cards-container {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
-  overflow: visible;
+  height: 271px;
+  overflow: hidden;
 }
 
 .experience-card-frame {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px; /* 카드 사이의 간격을 24px로 설정 */
   position: relative;
-  width: 993px; /* 3개의 카드 ���을 포함한 전체 너비 */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 64px;
 }
 
 .experience-card {
-  flex: 0 0 auto;
+  position: relative; /* absolute에서 relative로 변경 */
   width: 315px;
   height: 271px;
-  scroll-snap-align: center;
-  position: relative;
   border-radius: 13.443px;
   background: rgba(34, 36, 37, 0.2);
   padding: 21px 0 0 0;
-  overflow: hidden;
   transition: all 0.3s ease;
 }
 
-.experience-card:not(:nth-child(2)) {
+#card1 {
   transform: scale(0.75);
   opacity: 0.3;
 }
 
-.experience-card:first-child {
-  transform-origin: left center;
-  position: absolute;
-  right: 0;
+#card2 {
+  transform: scale(1);
+  opacity: 1;
 }
 
-.experience-card:last-child {
-  transform-origin: right center;
-  position: absolute;
-  left: 0;
+#card3 {
+  transform: scale(0.75);
+  opacity: 0.3;
 }
 
 .experience-prev,
 .experience-next {
-  cursor: pointer;
-  z-index: 1;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
 }
 
 .experience-prev {
-  left: -30px;
+  left: 10px;
 }
 
 .experience-next {
-  right: -30px;
+  right: 10px;
 }
 
 .experience-card-period-wrapper {
