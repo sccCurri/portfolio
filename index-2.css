@@ -1,0 +1,250 @@
+body {
+  margin: 0;
+}
+.background {
+  gap: 44px;
+}
+.project-card {
+  margin: 98px 109px 0;
+  height: 481px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-areas:
+    "top top top top"
+    "name name image ."
+    "icons tool image ."
+    "bottom bottom bottom bottom";
+  grid-template-rows: 50px 242px 132px 50px;
+  grid-template-columns: 250px 250px 1fr 50px;
+  overflow: hidden;
+}
+
+.project-card > * {
+  background-color: #fff;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.project-card::before,
+.project-card::after {
+  content: "";
+  background-color: #fff;
+}
+
+.project-card::before {
+  grid-area: top;
+  border-bottom: 1px solid #000;
+}
+
+.project-card::after {
+  grid-area: bottom;
+  border-top: 1px solid #000;
+  border-bottom: none;
+}
+
+.project-card-name {
+  grid-area: name;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  border-left: none;
+  padding: 0px 24px;
+}
+
+.project-card-image {
+  grid-area: image;
+  padding: 10px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.project-card-icons {
+  grid-area: icons;
+  padding: 10px;
+  border-left: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px; /* 각 행 사이의 간격 */
+  padding-left: 24px;
+  border-bottom: none;
+}
+
+.project-row {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 아이콘과 텍스트 사이의 간격 */
+}
+
+.project-icon {
+  width: 20px; /* 아이콘 크기 조정 */
+  height: 20px;
+}
+
+.project-content-detail {
+  font-size: 14px; /* 텍스트 크기 조정 */
+}
+
+.project-card-tool {
+  grid-area: tool;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  border-bottom: none;
+}
+.project-image {
+  width: 100%;
+  height: 100%;
+}
+.project-title {
+  color: #1d1f20;
+  font-family: NanumSquareOTF;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.project-content {
+  color: #5f666b;
+  font-family: NanumSquareOTF;
+  font-size: 11.05px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 199.091% */
+}
+
+.project-content-detail {
+  color: #5f666b;
+  font-family: NanumSquareOTF;
+  font-size: 10.298px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.project-tool-detail {
+  color: #1d1f20;
+  font-family: NanumSquareOTF;
+  font-size: 10.298px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.project-tool-point {
+  width: 8px;
+  height: 8px;
+}
+.project-div-image {
+  width: 544px;
+  height: 306px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.project-pictures {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 50px;
+}
+.project-picture-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-picture {
+  position: relative;
+}
+
+.project-picture.side {
+  width: 544px;
+  height: 306px;
+  transform: scale(0.75);
+  z-index: 1;
+  background-color: grey;
+  opacity: 0.3;
+  border-radius: 15px;
+}
+
+.project-picture.center {
+  width: 544px;
+  height: 306px;
+  z-index: 2;
+  background-color: black;
+  border-radius: 15px;
+}
+
+.project-picture.side:first-child {
+  margin-right: -10%;
+}
+
+.project-picture.side:last-child {
+  margin-left: -10%;
+}
+
+.project-div-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-prev {
+  position: absolute;
+  left: 0;
+}
+.project-next {
+  position: absolute;
+  right: 0;
+}
+.detail-card {
+  border-top: 1px solid #000;
+  display: grid;
+  grid-template-areas:
+    "a list ts b"
+    "c d d e";
+  grid-template-columns: 109px 1fr 1fr 109px;
+  grid-template-rows: min-content 34px;
+  overflow: hidden;
+}
+.detail-card > * {
+  background-color: #fff;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.detail-card-a {
+  grid-area: a;
+}
+.detail-card-b {
+  grid-area: b;
+  border-right: none;
+}
+.detail-card-c {
+  grid-area: c;
+}
+.detail-card-d {
+  grid-area: d;
+}
+.detail-card-e {
+  grid-area: e;
+  border-right: none;
+}
+
+.detail-card-list {
+  grid-area: list;
+}
+.detail-card-ts {
+  grid-area: ts;
+}
