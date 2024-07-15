@@ -78,6 +78,11 @@ body {
   display: flex;
   align-items: center;
   gap: 10px; /* 아이콘과 텍스트 사이의 간격 */
+  margin-bottom: 4px;
+}
+
+.project-row:last-child {
+  margin-bottom: 0;
 }
 
 .project-icon {
@@ -166,6 +171,7 @@ body {
 
 .project-picture {
   position: relative;
+  transition: all 0.3s ease;
 }
 
 .project-picture.side {
@@ -184,6 +190,8 @@ body {
   z-index: 2;
   background-color: black;
   border-radius: 15px;
+  transform: scale(1);
+  opacity: 1;
 }
 
 .project-picture.side:first-child {
@@ -203,10 +211,12 @@ body {
 .project-prev {
   position: absolute;
   left: 0;
+  cursor: pointer;
 }
 .project-next {
   position: absolute;
   right: 0;
+  cursor: pointer;
 }
 .detail-card {
   border-top: 1px solid #000;
@@ -244,7 +254,49 @@ body {
 
 .detail-card-list {
   grid-area: list;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.detail-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .detail-card-ts {
   grid-area: ts;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.detail-card-title {
+  display: flex;
+  padding: 4px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  border-radius: 28px;
+  background: #222425;
+  color: white;
+  width: 70px;
+  margin: 15px 0;
+}
+.project-card-detail {
+  color: #1d1f20;
+  font-family: NanumSquareOTF;
+  font-size: 16.745px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.project-card-ex {
+  color: #5f666b;
+  font-family: NanumSquareOTF;
+  font-size: 15.457px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 12px 0;
 }
