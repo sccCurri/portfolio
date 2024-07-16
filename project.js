@@ -24,10 +24,20 @@ function updateImages() {
 }
 
 function moveImages(direction) {
+  const wrapper = document.querySelector(".project-picture-wrapper");
+  wrapper.style.transition = "transform 0.5s ease-in-out";
+
   if (direction === "next") {
+    wrapper.style.transform = "translateX(-33.33%)";
     currentImageIndex = (currentImageIndex + 1) % 3;
   } else if (direction === "prev") {
+    wrapper.style.transform = "translateX(33.33%)";
     currentImageIndex = (currentImageIndex - 1 + 3) % 3;
   }
-  updateImages();
+
+  setTimeout(() => {
+    wrapper.style.transition = "none";
+    wrapper.style.transform = "translateX(0)";
+    updateImages();
+  }, 500);
 }
