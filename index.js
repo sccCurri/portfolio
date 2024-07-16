@@ -88,10 +88,20 @@ function updateCards() {
 }
 
 function moveCards(direction) {
+  const frame = document.querySelector(".experience-card-frame");
+  frame.style.transition = "transform 0.5s ease-in-out";
+
   if (direction === "next") {
     currentIndex = (currentIndex + 1) % 3;
+    frame.style.transform = "translateX(-33.33%)";
   } else if (direction === "prev") {
     currentIndex = (currentIndex - 1 + 3) % 3;
+    frame.style.transform = "translateX(33.33%)";
   }
-  updateCards();
+
+  setTimeout(() => {
+    frame.style.transition = "none";
+    frame.style.transform = "translateX(0)";
+    updateCards();
+  }, 500);
 }

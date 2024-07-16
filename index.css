@@ -604,16 +604,18 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0 64px;
+  transition: transform 0.5s ease-in-out;
 }
 
 .experience-card {
-  position: relative; /* absolute에서 relative로 변경 */
+  position: relative;
   width: 315px;
   height: 271px;
   border-radius: 13.443px;
   background: rgba(34, 36, 37, 0.2);
   padding: 21px 0 0 0;
-  transition: all 0.3s ease;
+  transition: transform 0.5s ease-in-out;
+  min-width: 33.33%;
 }
 
 #card1 {
