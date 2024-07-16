@@ -11,7 +11,7 @@
   --highlight-color: #ffffff;
   --shadow-color: rgba(0, 0, 0, 0.25);
   --font-family-main: "NanumSquareOTF", Helvetica, Arial, sans-serif;
-  --font-family-bold: "NanumSquareOTF-Bold", Helvetica;
+  --font-family-bold: "NanumSquareOTF-ExtraBold", Helvetica;
   --font-family-regular: "NanumSquareOTF-Regular", Helvetica;
 }
 
@@ -20,8 +20,10 @@
   box-sizing: border-box;
 }
 
-body,
-html {
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
   margin: 0;
   padding: 0;
   font-family: var(--font-family-main);
@@ -36,26 +38,31 @@ body {
 .background {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
+  max-width: 100%;
 }
 
 .frame {
-  width: 1440px;
-  height: auto; /* 내용에 따라 자동으로 높이 조절 */
+  width: 100%;
+  max-width: 1500px;
+  height: auto;
   position: relative;
+  display: flex;
+  margin: 0 auto;
+  padding: 70px 20px;
 }
 
 .side-bar {
-  position: absolute;
   width: 312px;
-  height: auto; /* 내용에 따라 자동으로 높이 조절 */
-  top: 70px;
-  left: 20px;
+  flex-shrink: 0;
+  height: auto;
   background-color: var(--main-bg-color);
   border-radius: 20px;
   box-shadow: 0px 4px 4px var(--shadow-color);
-  padding-bottom: 30px; /* 하단 여백 추가 */
+  padding-bottom: 30px;
+  position: sticky;
+  top: 70px;
 }
 
 .side-bar-logo,
@@ -94,7 +101,7 @@ body {
   object-fit: cover;
   object-position: center 20%;
   transform: scale(1.1) translateY(5%); /* 1.1배 확대하고 약간 아래로 이동 */
-  transition: transform 0.3s ease; /* 부드러운 변화를 위한 트랜지션 추가 */
+  transition: transform 0.3s ease; /* 부드러운 변화를 위한 트랜지 추가 */
 }
 
 .side-bar-profile:hover .side-bar-profile-picture {
@@ -247,8 +254,8 @@ body {
 .skill-item {
   width: 100%;
   margin-bottom: 12px;
-  position: relative; /* 추가 */
-  clear: both; /* 추가 */
+  position: relative; /* 가 */
+  clear: both; /* 추 */
 }
 
 .skill-set {
@@ -439,23 +446,12 @@ body {
 }
 
 .main-content {
-  position: absolute;
-  width: 1127px;
-  height: 1458px;
-  left: 313px;
-  top: 0;
-  background-color: var(--highlight-color);
-  border-radius: 50px 0px 0px 0px;
-}
-.bg-white {
-  background-color: var(--highlight-color);
+  width: calc(100% - 352px); /* 312px for sidebar + 40px for gap */
+  margin-left: 40px;
 }
 .intro-div {
-  position: absolute;
   width: 999px;
   height: 471px;
-  top: 70px;
-  left: 382px;
   border-radius: 15.04px;
   overflow: hidden;
   box-shadow: 0px 4.01px 20.06px #00000033;
@@ -575,8 +571,7 @@ body {
 .experience-div {
   position: relative;
   width: 999px;
-  margin-top: 596px;
-  margin-left: 382px;
+  margin: 50px 0px;
 }
 
 .experience-title {
@@ -810,8 +805,7 @@ body {
 .project-div {
   position: relative;
   width: 999px;
-  margin-top: 50px;
-  margin-left: 382px;
+  margin: 50px 0px;
 }
 
 .project-title {
@@ -884,4 +878,53 @@ body {
   font-size: 11.1px;
   line-height: 20.1px;
   letter-spacing: 0;
+}
+
+@media (max-width: 1024px) {
+  .frame {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .side-bar,
+  .main-content {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 20px;
+  }
+
+  .side-bar {
+    position: relative;
+    top: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .intro-div,
+  .experience-div,
+  .project-div {
+    width: 100%;
+  }
+
+  .experience-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }

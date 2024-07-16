@@ -1,0 +1,217 @@
+:root {
+  --main-organization-color: #222425;
+  --sub-organization-color: #d3d3d3;
+  --main-svg-filter: invert(12%) sepia(6%) saturate(445%) hue-rotate(156deg)
+    brightness(99%) contrast(94%);
+  --main-bg-color: #f5f5f5;
+  --main-font-color: #222425;
+  --secondary-font-color: #5f666b;
+  --highlight-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.25);
+  --font-family-main: "NanumSquareOTF", Helvetica, Arial, sans-serif;
+  --font-family-bold: "NanumSquareOTF-ExtraBold", Helvetica;
+  --font-family-regular: "NanumSquareOTF-Regular", Helvetica;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .background {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .frame {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side-bar,
+  .intro-div,
+  .experience-div,
+  .project-div {
+    position: static;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+
+  .side-bar {
+    padding: 20px;
+    text-align: center;
+  }
+  .side-bar-logo,
+  .side-bar-profile,
+  .name-tag,
+  .info,
+  .strength-div,
+  .line,
+  .skill-wrap,
+  .license-div,
+  .education-div {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .education-text,
+  .skill-title-text {
+    position: absolute;
+    left: 0;
+  }
+  .skill-title-text,
+  .education-text,
+  .license-title {
+    display: flex;
+    align-items: center;
+    left: 0;
+    font-size: 14px;
+    font-family: var(--font-family-bold);
+    text-align: left;
+  }
+  .license-title {
+    margin-left: 0;
+  }
+  .skill-title-img,
+  .education-img,
+  .license-img {
+    margin-right: 10px;
+    display: none;
+  }
+
+  .intro-div {
+    display: none;
+  }
+
+  .experience-div {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-cards-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .experience-card-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .experience-card {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    margin: 20px 0;
+    transform: scale(1);
+    opacity: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-card-period-wrapper {
+    margin: 0 0 10px;
+  }
+
+  .experience-card-company,
+  .experience-card-term,
+  .experience-card-team-name,
+  .experience-card-task-text,
+  .experience-card-task-term,
+  .experience-card-project-name,
+  .experience-card-task-detail-text {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .experience-card-task,
+  .experience-card-task-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .point {
+    margin-right: 5px;
+  }
+
+  #card1,
+  #card3 {
+    display: none;
+  }
+
+  .experience-prev,
+  .experience-next {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+  }
+
+  .experience-prev {
+    left: -15px;
+  }
+
+  .experience-next {
+    right: -15px;
+  }
+
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    max-width: 400px;
+    margin: 0 auto 20px;
+    height: auto;
+  }
+
+  .project-main-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .project-content {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    background-color: var(--sub-organization-color);
+    border-radius: 0 0 15px 15px;
+  }
+
+  .project-content-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .project-content-text {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}

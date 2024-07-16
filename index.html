@@ -18,6 +18,7 @@
 
     <title>최지웅 이력서</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="mobile.css" />
   </head>
   <body>
     <div class="background">
@@ -184,7 +185,7 @@
             </div>
           </div>
         </div>
-        <div class="bg-white">
+        <div class="main-content">
           <div class="intro-div">
             <div class="intro-frame">
               <img class="intro-logo" src="image/basiclogo.svg" />
@@ -208,142 +209,160 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="experience-div">
-          <div class="experience-title">
-            <img class="experience-img" src="image/experience.svg" />
-            <div class="experience-text">EXPERIENCE</div>
-          </div>
-          <div class="experience-cards-container">
-            <img
-              class="experience-prev"
-              src="image/prev.svg"
-              onclick="moveCards('prev')"
-            />
-            <div class="experience-card-frame">
-              <div id="card1" class="experience-card">
-                <div class="experience-card-period-wrapper">
-                  <div class="experience-card-period">왼쪽</div>
-                </div>
-                <div class="experience-card-company">회사/기업명</div>
-                <div class="experience-card-term">YYYY.MM~YYYY.MM</div>
-                <div class="experience-card-team">
-                  <div class="experience-card-team-name">소속팀, 직무/직함</div>
-                </div>
-                <div class="experience-card-task">
-                  <div class="point"></div>
-                  <div class="experience-card-task-text">주요 업무 1</div>
-                </div>
-                <div class="experience-card-task-term">YYYY.MM~YYYY.MM</div>
-                <div class="experience-card-project">
-                  <div class="experience-card-project-name">
-                    주요 프로젝트 1
-                  </div>
-                </div>
-                <div class="experience-card-task-detail">
-                  <div class="point"></div>
-                  <div class="experience-card-task-detail-text">
-                    프로젝트 소개 및 TASK
-                  </div>
-                </div>
-              </div>
-              <div id="card2" class="experience-card">
-                <div class="experience-card-period-wrapper">
-                  <div class="experience-card-period">00년 00개월</div>
-                </div>
-                <div class="experience-card-company">회사/기업명</div>
-                <div class="experience-card-term">YYYY.MM~YYYY.MM</div>
-                <div class="experience-card-team">
-                  <div class="experience-card-team-name">소속팀, 직무/직함</div>
-                </div>
-                <div class="experience-card-task">
-                  <div class="point"></div>
-                  <div class="experience-card-task-text">주요 업무 1</div>
-                </div>
-                <div class="experience-card-task-term">YYYY.MM~YYYY.MM</div>
-                <div class="experience-card-project">
-                  <div class="experience-card-project-name">
-                    주요 프로젝트 1
-                  </div>
-                </div>
-                <div class="experience-card-task-detail">
-                  <div class="point"></div>
-                  <div class="experience-card-task-detail-text">
-                    프로젝트 소개 및 TASK
-                  </div>
-                </div>
-              </div>
-              <div id="card3" class="experience-card">
-                <div class="experience-card-period-wrapper">
-                  <div class="experience-card-period">00년 00개월</div>
-                </div>
-                <div class="experience-card-company">회사/기업명</div>
-                <div class="experience-card-term">YYYY.MM~YYYY.MM</div>
-                <div class="experience-card-team">
-                  <div class="experience-card-team-name">소속팀, 직무/직함</div>
-                </div>
-                <div class="experience-card-task">
-                  <div class="point"></div>
-                  <div class="experience-card-task-text">주요 업무 1</div>
-                </div>
-                <div class="experience-card-task-term">YYYY.MM~YYYY.MM</div>
-                <div class="experience-card-project">
-                  <div class="experience-card-project-name">
-                    주요 프로젝트 1
-                  </div>
-                </div>
-                <div class="experience-card-task-detail">
-                  <div class="point"></div>
-                  <div class="experience-card-task-detail-text">
-                    프로젝트 소개 및 TASK
-                  </div>
-                </div>
-              </div>
+          <div class="experience-div">
+            <div class="experience-title">
+              <img class="experience-img" src="image/experience.svg" />
+              <div class="experience-text">EXPERIENCE</div>
             </div>
-            <img
-              class="experience-next"
-              src="image/next.svg"
-              onclick="moveCards('next')"
-            />
-          </div>
-        </div>
-        <div class="project-div">
-          <div class="project-title">
-            <img class="project-title-img" src="image/project.svg" />
-            <div class="project-title-text">PROJECT</div>
-          </div>
-          <div class="project-container">
-            <div class="project" onclick="location.href='project.html'">
-              <div class="project-main-img"></div>
-              <div class="project-content">
-                <div class="project-content-title">프로젝트명</div>
-                <p class="project-content-text">
-                  프로젝트 설명 짧은 설명 프로젝트 설명 짧은 설명 프로젝트 설명
-                  짧은 설명<br />프로젝트 설명 짧은 설명 프로젝트 설명 짧은 설명
-                  프로젝트 설명 짧은 설명
-                </p>
+            <div class="experience-cards-container">
+              <img
+                class="experience-prev"
+                src="image/prev.svg"
+                onclick="moveCards('prev')"
+              />
+              <div class="experience-card-frame">
+                <div id="card1" class="experience-card">
+                  <div class="experience-card-period-wrapper">
+                    <div class="experience-card-period">왼쪽</div>
+                  </div>
+                  <div class="experience-card-company">회사/기업명</div>
+                  <div class="experience-card-term">YYYY.MM~YYYY.MM</div>
+                  <div class="experience-card-team">
+                    <div class="experience-card-team-name">
+                      소속팀, 직무/직함
+                    </div>
+                  </div>
+                  <div class="experience-card-task">
+                    <div class="point"></div>
+                    <div class="experience-card-task-text">주요 업무 1</div>
+                  </div>
+                  <div class="experience-card-task-term">YYYY.MM~YYYY.MM</div>
+                  <div class="experience-card-project">
+                    <div class="experience-card-project-name">
+                      주요 프로젝트 1
+                    </div>
+                  </div>
+                  <div class="experience-card-task-detail">
+                    <div class="point"></div>
+                    <div class="experience-card-task-detail-text">
+                      프로젝트 소개 및 TASK
+                    </div>
+                  </div>
+                </div>
+                <div id="card2" class="experience-card">
+                  <div class="experience-card-period-wrapper">
+                    <div class="experience-card-period">00년 00개월</div>
+                  </div>
+                  <div class="experience-card-company">회사/기업명</div>
+                  <div class="experience-card-term">YYYY.MM~YYYY.MM</div>
+                  <div class="experience-card-team">
+                    <div class="experience-card-team-name">
+                      소속팀, 직무/직함
+                    </div>
+                  </div>
+                  <div class="experience-card-task">
+                    <div class="point"></div>
+                    <div class="experience-card-task-text">주요 업무 1</div>
+                  </div>
+                  <div class="experience-card-task-term">YYYY.MM~YYYY.MM</div>
+                  <div class="experience-card-project">
+                    <div class="experience-card-project-name">
+                      주요 프로젝트 1
+                    </div>
+                  </div>
+                  <div class="experience-card-task-detail">
+                    <div class="point"></div>
+                    <div class="experience-card-task-detail-text">
+                      프로젝트 소개 및 TASK
+                    </div>
+                  </div>
+                </div>
+                <div id="card3" class="experience-card">
+                  <div class="experience-card-period-wrapper">
+                    <div class="experience-card-period">00년 00개월</div>
+                  </div>
+                  <div class="experience-card-company">회사/기업명</div>
+                  <div class="experience-card-term">YYYY.MM~YYYY.MM</div>
+                  <div class="experience-card-team">
+                    <div class="experience-card-team-name">
+                      소속팀, 직무/직함
+                    </div>
+                  </div>
+                  <div class="experience-card-task">
+                    <div class="point"></div>
+                    <div class="experience-card-task-text">주요 업무 1</div>
+                  </div>
+                  <div class="experience-card-task-term">YYYY.MM~YYYY.MM</div>
+                  <div class="experience-card-project">
+                    <div class="experience-card-project-name">
+                      주요 프로젝트 1
+                    </div>
+                  </div>
+                  <div class="experience-card-task-detail">
+                    <div class="point"></div>
+                    <div class="experience-card-task-detail-text">
+                      프로젝트 소개 및 TASK
+                    </div>
+                  </div>
+                </div>
               </div>
+              <img
+                class="experience-next"
+                src="image/next.svg"
+                onclick="moveCards('next')"
+              />
             </div>
-            <div class="project" onclick="location.href='project.html'">
-              <div class="project-main-img"></div>
-              <div class="project-content">
-                <div class="project-content-title">프로젝트명</div>
-                <p class="project-content-text">
-                  프로젝트 설명 짧은 설명 프젝트 설명 짧은 설명 프로젝트 설명
-                  짧은 설명<br />프로젝트 설명 짧은 설명 프로젝트 설명 짧은 설명
-                  프로젝트 설명 짧은 설명
-                </p>
+          </div>
+          <div class="project-div">
+            <div class="project-title">
+              <img class="project-title-img" src="image/project.svg" />
+              <div class="project-title-text">PROJECT</div>
+            </div>
+            <div class="project-container">
+              <div class="project" onclick="location.href='project.html'">
+                <img
+                  src="image/p1.png"
+                  alt="프로젝트 이미지"
+                  class="project-main-img"
+                />
+                <div class="project-content">
+                  <div class="project-content-title">프로젝트명</div>
+                  <p class="project-content-text">
+                    프로젝트 설명 짧은 설명 프로젝트 설명 짧은 설명 프로젝트
+                    설명 짧은 설명<br />프로젝트 설명 짧은 설명 프로젝트 설명
+                    짧은 설명 프로젝트 설명 짧은 설명
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="project" onclick="location.href='project.html'">
-              <div class="project-main-img"></div>
-              <div class="project-content">
-                <div class="project-content-title">프로젝트명</div>
-                <p class="project-content-text">
-                  프로젝트 설명 짧은 설명 프로젝트 설명 짧은 설명 프로젝트 설명
-                  짧은 설명<br />프로젝트 설명 짧은 설명 프로젝트 설명 짧은 설명
-                  프로젝트 설명 짧은 설명
-                </p>
+              <div class="project" onclick="location.href='project.html'">
+                <img
+                  src="image/p2.png"
+                  alt="프로젝트 이미지"
+                  class="project-main-img"
+                />
+                <div class="project-content">
+                  <div class="project-content-title">프로젝트명</div>
+                  <p class="project-content-text">
+                    프로젝트 설명 짧은 설명 프젝트 설명 짧은 설명 프로젝트 설명
+                    짧은 설명<br />프로젝트 설명 짧은 설명 프로젝트 설명 짧은
+                    설명 프로젝트 설명 짧은 설명
+                  </p>
+                </div>
+              </div>
+              <div class="project" onclick="location.href='project.html'">
+                <img
+                  src="image/p3.png"
+                  alt="프로젝트 이미지"
+                  class="project-main-img"
+                />
+                <div class="project-content">
+                  <div class="project-content-title">프로젝트명</div>
+                  <p class="project-content-text">
+                    프로젝트 설명 짧은 설명 프로젝트 설명 짧은 설명 프로젝트
+                    설명 짧은 설명<br />프로젝트 설명 짧은 설명 프로젝트 설명
+                    짧은 설명 프로젝트 설명 짧은 설명
+                  </p>
+                </div>
               </div>
             </div>
           </div>
