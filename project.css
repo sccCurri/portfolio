@@ -1,8 +1,11 @@
 body {
   margin: 0;
-}
-.background {
-  gap: 44px;
+  background-image: url("image/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden; /* 가로 스크롤 방지 */
 }
 .project-card {
   margin: 98px 109px 0;
@@ -229,7 +232,6 @@ body {
   overflow: hidden;
 }
 .detail-card > * {
-  background-color: #fff;
   border-right: 1px solid #000;
   border-bottom: 1px solid #000;
 }
