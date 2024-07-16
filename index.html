@@ -370,44 +370,5 @@
       </div>
     </div>
     <script src="index.js"></script>
-    <script>
-      // Function to get URL parameters
-      function getUrlParameter(name) {
-        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-        var results = regex.exec(location.search);
-        return results === null
-          ? ""
-          : decodeURIComponent(results[1].replace(/\+/g, " "));
-      }
-
-      // Get the 'mode' parameter from the URL
-      var mode = getUrlParameter("mode");
-
-      // If the mode is 'sparta', change the --main-font-color to E8344E and the logos to sparta-logo
-      if (mode === "sparta") {
-        document.documentElement.style.setProperty(
-          "--main-organization-color",
-          "#E8344E"
-        );
-        document.documentElement.style.setProperty(
-          "--sub-organization-color",
-          "#FAD6DC"
-        );
-        document.documentElement.style.setProperty(
-          "--main-svg-filter",
-          "invert(30%) sepia(44%) saturate(5563%) hue-rotate(335deg) brightness(96%) contrast(89%)"
-        );
-        var sideBarLogo = document.querySelector(".side-bar-logo");
-        if (sideBarLogo) {
-          sideBarLogo.src = "image/sparta-logo.png";
-        }
-
-        var introLogo = document.querySelector(".intro-logo");
-        if (introLogo) {
-          introLogo.src = "image/sparta-logo.png";
-        }
-      }
-    </script>
   </body>
 </html>
