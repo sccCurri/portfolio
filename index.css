@@ -1,5 +1,20 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 
+:root {
+  --main-organization-color: #222425;
+  --sub-organization-color: #d3d3d3;
+  --main-svg-filter: invert(12%) sepia(6%) saturate(445%) hue-rotate(156deg)
+    brightness(99%) contrast(94%);
+  --main-bg-color: #f5f5f5;
+  --main-font-color: #222425;
+  --secondary-font-color: #5f666b;
+  --highlight-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.25);
+  --font-family-main: "NanumSquareOTF", Helvetica, Arial, sans-serif;
+  --font-family-bold: "NanumSquareOTF-Bold", Helvetica;
+  --font-family-regular: "NanumSquareOTF-Regular", Helvetica;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
@@ -9,7 +24,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-family: "NanumSquareOTF", Helvetica, Arial, sans-serif;
+  font-family: var(--font-family-main);
 }
 body {
   background-image: url("image/bg.png");
@@ -35,12 +50,23 @@ body {
   position: absolute;
   width: 312px;
   height: auto; /* 내용에 따라 자동으로 높이 조절 */
-  top: 20px;
+  top: 70px;
   left: 20px;
-  background-color: #f5f5f5;
+  background-color: var(--main-bg-color);
   border-radius: 20px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px var(--shadow-color);
   padding-bottom: 30px; /* 하단 여백 추가 */
+}
+
+.side-bar-logo,
+.intro-logo {
+  width: 100%;
+  height: auto;
+  max-width: 240px; /* Adjust as needed */
+  display: block;
+  margin: 0 auto;
+  object-fit: contain; /* Ensures the aspect ratio is maintained */
+  aspect-ratio: attr(width) / attr(height); /* Maintains the aspect ratio */
 }
 
 .side-bar-logo {
@@ -86,9 +112,9 @@ body {
 .name {
   position: relative;
   width: 241px;
-  font-family: "NanumSquareOTF-Bold", Helvetica;
+  font-family: var(--font-family-bold);
   font-weight: 700;
-  color: #222425;
+  color: var(--main-organization-color);
   font-size: 48.1px;
   text-align: center;
   letter-spacing: 0;
@@ -102,7 +128,7 @@ body {
   color: #81898f;
   font-size: 18.1px;
   text-align: center;
-  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-family: var(--font-family-regular);
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
@@ -127,12 +153,13 @@ body {
   width: 16px;
   height: 16px;
   margin-right: 9px;
+  filter: var(--main-svg-filter);
 }
 
 .info-detail-exp {
-  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-family: var(--font-family-regular);
   font-weight: 400;
-  color: #5f666b;
+  color: var(--secondary-font-color);
   font-size: 11.2px;
   letter-spacing: 0;
   line-height: 16px;
@@ -161,12 +188,13 @@ body {
   width: 70px;
   height: 68px;
   margin-bottom: 9px;
+  filter: var(--main-svg-filter);
 }
 
 .strength-text {
-  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-family: var(--font-family-regular);
   font-weight: 400;
-  color: #5f666b;
+  color: var(--secondary-font-color);
   font-size: 11px;
   line-height: 1.2;
 }
@@ -200,6 +228,7 @@ body {
   position: absolute;
   left: 0;
   top: 2px;
+  filter: var(--main-svg-filter);
 }
 
 .skill-title-text {
@@ -207,9 +236,9 @@ body {
   width: 216px;
   top: 0;
   left: 23px;
-  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-family: var(--font-family-regular);
   font-weight: 400;
-  color: #5f666b;
+  color: var(--secondary-font-color);
   font-size: 11.3px;
   letter-spacing: 0;
   line-height: normal;
@@ -232,15 +261,16 @@ body {
 .point {
   width: 7px;
   height: 7px;
-  background-color: #222425;
+  background-color: var(--main-font-color);
   border-radius: 3.69px;
   margin-right: 8px;
+  filter: var(--main-svg-filter);
 }
 
 .skill-text {
-  font-family: "NanumSquareOTF-Bold", Helvetica;
+  font-family: var(--font-family-bold);
   font-weight: 700;
-  color: #1d1f20;
+  color: var(--main-font-color);
   font-size: 12.5px;
   letter-spacing: 0;
   line-height: normal;
@@ -249,9 +279,9 @@ body {
 .skill-bar {
   width: 233px;
   height: 14px;
-  background-color: #ffffff;
+  background-color: var(--highlight-color);
   border-radius: 9.41px;
-  box-shadow: 0px 1.25px 3.95px #00000026;
+  box-shadow: 0px 1.25px 3.95px var(--shadow-color);
   margin-top: 10px;
   position: relative;
 }
@@ -267,7 +297,7 @@ body {
   height: 6px;
   top: 4px;
   left: 0;
-  background-color: #222425;
+  background-color: var(--main-organization-color);
   border-radius: 8.15px;
 }
 
@@ -276,7 +306,7 @@ body {
   width: 14px;
   height: 14px;
   top: 0;
-  background-color: #ffffff;
+  background-color: var(--highlight-color);
   border-radius: 6.9px;
   box-shadow: 0px 0px 2.51px #00000026;
 }
@@ -286,7 +316,7 @@ body {
   width: 8px;
   height: 8px;
   top: 3px;
-  background-color: #222425;
+  background-color: var(--main-organization-color);
   border-radius: 3.76px;
 }
 
@@ -302,15 +332,16 @@ body {
   height: 11px;
   display: inline-block;
   vertical-align: middle;
+  filter: var(--main-svg-filter);
 }
 
 .license-title {
   display: inline-block;
   vertical-align: middle;
   margin-left: 7px;
-  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-family: var(--font-family-regular);
   font-weight: 400;
-  color: #5f666b;
+  color: var(--secondary-font-color);
   font-size: 11.3px;
   letter-spacing: 0;
   line-height: normal;
@@ -326,10 +357,10 @@ body {
   position: relative;
   width: 100%;
   height: 39px;
-  background-color: #22242533;
+  background-color: var(--sub-organization-color);
   border-radius: 5px;
   border: 2px solid;
-  border-color: #222425;
+  border-color: var(--main-organization-color);
   margin-bottom: 5px; /* 각 license-content 사이의 간격 */
 }
 
@@ -338,9 +369,9 @@ body {
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
-  font-family: "NanumSquareOTF-Bold", Helvetica;
+  font-family: var(--font-family-bold);
   font-weight: 700;
-  color: #1d1f20;
+  color: var(--main-font-color);
   font-size: 12.5px;
   letter-spacing: 0;
   line-height: normal;
@@ -365,9 +396,9 @@ body {
   width: 216px;
   top: 0;
   left: 25px;
-  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-family: var(--font-family-regular);
   font-weight: 400;
-  color: #5f666b;
+  color: var(--secondary-font-color);
   font-size: 11.2px;
   letter-spacing: 0;
   line-height: normal;
@@ -379,6 +410,7 @@ body {
   height: 11px;
   top: 2px;
   left: 0;
+  filter: var(--main-svg-filter);
 }
 
 .education-content {
@@ -388,9 +420,9 @@ body {
 
 .education-name {
   width: 100%;
-  font-family: "NanumSquareOTF-Bold", Helvetica;
+  font-family: var(--font-family-bold);
   font-weight: 700;
-  color: #1d1f20;
+  color: var(--main-font-color);
   font-size: 16.4px;
   line-height: normal;
   margin-bottom: 10px;
@@ -398,9 +430,9 @@ body {
 
 .education-detail {
   width: 100%;
-  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-family: var(--font-family-regular);
   font-weight: 400;
-  color: #5f666b;
+  color: var(--secondary-font-color);
   font-size: 11.2px;
   line-height: normal;
   margin-bottom: 20px;
@@ -412,11 +444,11 @@ body {
   height: 1458px;
   left: 313px;
   top: 0;
-  background-color: #ffffff;
+  background-color: var(--highlight-color);
   border-radius: 50px 0px 0px 0px;
 }
 .bg-white {
-  background-color: white;
+  background-color: var(--highlight-color);
 }
 .intro-div {
   position: absolute;
@@ -427,7 +459,9 @@ body {
   border-radius: 15.04px;
   overflow: hidden;
   box-shadow: 0px 4.01px 20.06px #00000033;
-  background: #ffffff; /* Add this line for solid white background */
+  background: var(
+    --highlight-color
+  ); /* Add this line for solid white background */
 }
 
 .intro-frame {
@@ -436,7 +470,7 @@ body {
   background: linear-gradient(
     180deg,
     rgba(34, 36, 37, 0) 0%,
-    rgba(34, 36, 37, 0.2) 100%
+    var(--sub-organization-color) 100%
   );
 }
 
@@ -455,7 +489,7 @@ body {
   height: 356px;
   top: 57px;
   left: 579px;
-  background-color: #ffffff;
+  background-color: var(--highlight-color);
 }
 
 .intro-picture {
@@ -474,6 +508,7 @@ body {
   height: 104px;
   top: 72px;
   left: 526px;
+  filter: var(--main-svg-filter);
 }
 
 .intro-content {
@@ -490,6 +525,7 @@ body {
   height: 41px;
   top: 0;
   left: 0;
+  filter: var(--main-svg-filter);
 }
 
 .intro-text {
@@ -497,9 +533,9 @@ body {
   width: 461px;
   top: 56px;
   left: 0;
-  font-family: "NanumSquareOTF-Bold", Helvetica;
+  font-family: var(--font-family-bold);
   font-weight: 700;
-  color: #1d1f20;
+  color: var(--main-font-color);
   font-size: 36.1px;
   letter-spacing: 0;
   line-height: normal;
@@ -510,35 +546,10 @@ body {
   width: 461px;
   top: 171px;
   left: 0;
-  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-family: var(--font-family-regular);
   font-weight: 400;
-  color: #5f666b;
+  color: var(--secondary-font-color);
   font-size: 15px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.intro-contact {
-  gap: 11.17px;
-  padding: 3.35px 16.75px;
-  position: absolute;
-  top: 229px;
-  left: 0;
-  border-radius: 24.57px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #222425;
-}
-
-.intro-contact-text {
-  position: relative;
-  width: fit-content;
-  margin-top: -1.12px;
-  font-family: "NanumSquareOTF-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 14.5px;
   letter-spacing: 0;
   line-height: normal;
 }
@@ -549,7 +560,7 @@ body {
   height: 1px;
   top: 56px;
   left: 0;
-  background: #222425;
+  background: var(--main-font-color);
 }
 
 .intro-column-line {
@@ -558,7 +569,7 @@ body {
   height: 471px;
   top: 0;
   left: 578px;
-  background: #222425;
+  background: var(--main-font-color);
 }
 
 .experience-div {
@@ -578,12 +589,13 @@ body {
   width: 27px;
   height: 22px;
   margin-right: 8px;
+  filter: var(--main-svg-filter);
 }
 
 .experience-text {
-  font-family: "NanumSquareOTF-Bold", Helvetica;
+  font-family: var(--font-family-bold);
   font-weight: 700;
-  color: #1d1f20;
+  color: var(--main-font-color);
   font-size: 23.1px;
   letter-spacing: 0;
   line-height: normal;
@@ -612,7 +624,7 @@ body {
   width: 315px;
   height: 271px;
   border-radius: 13.443px;
-  background: rgba(34, 36, 37, 0.2);
+  background: var(--sub-organization-color);
   padding: 21px 0 0 0;
   transition: transform 0.5s ease-in-out;
   min-width: 33.33%;
@@ -654,7 +666,7 @@ body {
   width: 54px;
   height: 14px;
   border-radius: 7px;
-  background: #222425;
+  background: var(--main-organization-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -662,9 +674,9 @@ body {
 }
 
 .experience-card-period {
-  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-family: var(--font-family-regular);
   font-weight: 400;
-  color: #ffffff;
+  color: var(--highlight-color);
   font-size: 7.8px;
   line-height: normal;
   white-space: nowrap;
@@ -674,9 +686,9 @@ body {
 .experience-card-company {
   width: 100%;
   text-align: center;
-  font-family: "NanumSquareOTF-ExtraBold", Helvetica;
+  font-family: var(--font-family-bold);
   font-weight: 800;
-  color: #1d1f20;
+  color: var(--main-font-color);
   font-size: 24.2px;
   line-height: normal;
   letter-spacing: 0;
@@ -685,9 +697,9 @@ body {
 .experience-card-term {
   width: 100%;
   text-align: center;
-  color: #5f666b;
+  color: var(--secondary-font-color);
   font-size: 11.1px;
-  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-family: var(--font-family-regular);
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
@@ -700,7 +712,7 @@ body {
   height: 20px;
   top: 107px;
   left: 33px;
-  background-color: #222425;
+  background-color: var(--main-organization-color);
   border-radius: 13.09px;
 }
 
@@ -708,9 +720,9 @@ body {
   position: absolute;
   top: 2px;
   left: 12px;
-  font-family: "NanumSquareOTF-Bold", Helvetica;
+  font-family: var(--font-family-bold);
   font-weight: 700;
-  color: #ffffff;
+  color: var(--highlight-color);
   font-size: 12px;
   line-height: normal;
   white-space: nowrap;
@@ -723,7 +735,7 @@ body {
   height: 20px;
   top: 171px;
   left: 33px;
-  background-color: #222425;
+  background-color: var(--main-organization-color);
   border-radius: 13.09px;
 }
 
@@ -731,9 +743,9 @@ body {
   position: absolute;
   top: 2px;
   left: 17px;
-  font-family: "NanumSquareOTF-Bold", Helvetica;
+  font-family: var(--font-family-bold);
   font-weight: 700;
-  color: #ffffff;
+  color: var(--highlight-color);
   font-size: 12px;
   line-height: normal;
   white-space: nowrap;
@@ -753,9 +765,9 @@ body {
   height: 19px;
   top: 0;
   left: 18px;
-  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-family: var(--font-family-regular);
   font-weight: 400;
-  color: #1d1f20;
+  color: var(--main-font-color);
   font-size: 12px;
   line-height: normal;
   position: absolute;
@@ -766,11 +778,11 @@ body {
   width: 202px;
   top: 203px;
   left: 33px;
-  color: #222425;
+  color: var(--main-font-color);
   font-size: 11.1px;
   white-space: nowrap;
   position: absolute;
-  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-family: var(--font-family-regular);
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
@@ -787,9 +799,9 @@ body {
 }
 
 .experience-card-task-detail-text {
-  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-family: var(--font-family-regular);
   font-weight: 400;
-  color: #1d1f20;
+  color: var(--main-font-color);
   font-size: 12px;
   line-height: normal;
   letter-spacing: 0;
@@ -812,12 +824,13 @@ body {
   width: 25px;
   height: 25px;
   margin-right: 9px;
+  filter: var(--main-svg-filter);
 }
 
 .project-title-text {
-  font-family: "NanumSquareOTF-Bold", Helvetica;
+  font-family: var(--font-family-bold);
   font-weight: 700;
-  color: #1d1f20;
+  color: var(--main-font-color);
   font-size: 23.1px;
   letter-spacing: 0;
   line-height: normal;
@@ -844,7 +857,7 @@ body {
 .project-main-img {
   width: 486px;
   height: 288px;
-  background-color: #222425;
+  background-color: var(--main-organization-color);
   border-radius: 15.04px 15.04px 0px 0px;
 }
 
@@ -852,22 +865,22 @@ body {
   width: 486px;
   height: 120px;
   border-radius: 0px 0px 15.04px 15.04px;
-  border: 2.01px solid #222425;
+  border: 2.01px solid var(--main-organization-color);
   padding: 20px 26px;
 }
 
 .project-content-title {
-  font-family: "NanumSquareOTF-ExtraBold", Helvetica;
+  font-family: var(--font-family-bold);
   font-weight: 800;
-  color: #1d1f20;
+  color: var(--main-font-color);
   font-size: 18px;
   margin-bottom: 10px;
 }
 
 .project-content-text {
-  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-family: var(--font-family-regular);
   font-weight: 400;
-  color: #5f666b;
+  color: var(--secondary-font-color);
   font-size: 11.1px;
   line-height: 20.1px;
   letter-spacing: 0;
