@@ -427,16 +427,17 @@ body {
   border-radius: 15.04px;
   overflow: hidden;
   box-shadow: 0px 4.01px 20.06px #00000033;
-  background: linear-gradient(
-    180deg,
-    rgba(34, 36, 37, 0) 0%,
-    rgba(34, 36, 37, 0.2) 100%
-  );
+  background: #ffffff; /* Add this line for solid white background */
 }
 
 .intro-frame {
   position: relative;
   height: 471px;
+  background: linear-gradient(
+    180deg,
+    rgba(34, 36, 37, 0) 0%,
+    rgba(34, 36, 37, 0.2) 100%
+  );
 }
 
 .intro-logo {
