@@ -22,8 +22,8 @@
 
   .side-bar,
   .intro-div,
-  .experience-div,
-  .project-div {
+  .exp-div,
+  .proj-div {
     position: static;
     width: 100%;
     max-width: 400px;
@@ -75,7 +75,7 @@
     display: none;
   }
 
-  .experience-div {
+  .exp-div {
     width: 90%;
     max-width: 400px;
     margin: 20px auto;
@@ -85,21 +85,21 @@
     align-items: flex-start;
   }
 
-  .experience-cards-container {
+  .exp-cards-container {
     position: relative;
     width: 100%;
     height: auto;
     overflow: visible;
   }
 
-  .experience-card-frame {
+  .exp-card-frame {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
   }
 
-  .experience-card {
+  .exp-card {
     width: 100%;
     height: auto;
     min-height: 300px;
@@ -114,23 +114,23 @@
     align-items: flex-start;
   }
 
-  .experience-card-period-wrapper {
+  .exp-card-period-wrapper {
     margin: 0 0 10px;
   }
 
-  .experience-card-company,
-  .experience-card-term,
-  .experience-card-team-name,
-  .experience-card-task-text,
-  .experience-card-task-term,
-  .experience-card-project-name,
-  .experience-card-task-detail-text {
+  .exp-card-company,
+  .exp-card-term,
+  .exp-card-team-name,
+  .exp-card-task-text,
+  .exp-card-task-term,
+  .exp-card-proj-name,
+  .exp-card-task-detail-text {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  .experience-card-task,
-  .experience-card-task-detail {
+  .exp-card-task,
+  .exp-card-task-detail {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -145,8 +145,8 @@
     display: none;
   }
 
-  .experience-prev,
-  .experience-next {
+  .exp-prev,
+  .exp-next {
     display: block;
     position: absolute;
     top: 50%;
@@ -156,33 +156,33 @@
     z-index: 10;
   }
 
-  .experience-prev {
+  .exp-prev {
     left: -15px;
   }
 
-  .experience-next {
+  .exp-next {
     right: -15px;
   }
 
-  .project-container {
+  .proj-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .project {
+  .proj {
     max-width: 400px;
     margin: 0 auto 20px;
     height: auto;
   }
 
-  .project-main-img {
+  .proj-main-img {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
   }
 
-  .project-content {
+  .proj-content {
     width: 100%;
     height: auto;
     padding: 15px;
@@ -190,12 +190,12 @@
     border-radius: 0 0 15px 15px;
   }
 
-  .project-content-title {
+  .proj-content-title {
     font-size: 16px;
     margin-bottom: 10px;
   }
 
-  .project-content-text {
+  .proj-content-text {
     font-size: 12px;
     line-height: 1.4;
   }
