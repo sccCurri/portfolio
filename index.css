@@ -10,11 +10,23 @@
   --secondary-font-color: #5f666b;
   --highlight-color: #ffffff;
   --shadow-color: rgba(0, 0, 0, 0.25);
-  --font-family-main: "NanumSquareOTF", Helvetica, Arial, sans-serif;
-  --font-family-bold: "NanumSquareOTF-ExtraBold", Helvetica;
-  --font-family-regular: "NanumSquareOTF-Regular", Helvetica;
+}
+.font-regular {
+  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-weight: 400;
+}
+.svg-filter {
+  filter: var(--main-svg-filter);
+}
+.font-bold {
+  font-family: "NanumSquareOTF-ExtraBold", Helvetica;
+  font-weight: 700;
 }
 
+.font-extra-bold {
+  font-family: var(--font-family-bold);
+  font-weight: var(--font-weight-extra-bold);
+}
 * {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
@@ -23,10 +35,8 @@
 html,
 body {
   overflow-x: hidden;
-  width: 100%;
   margin: 0;
   padding: 0;
-  font-family: var(--font-family-main);
 }
 body {
   background-image: url("image/bg.png");
@@ -39,90 +49,82 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
-  max-width: 100%;
 }
 
 .frame {
-  width: 100%;
-  max-width: 1500px;
+  max-width: 93.75rem;
   height: auto;
   position: relative;
   display: flex;
   margin: 0 auto;
-  padding: 70px 20px;
+  padding: 4.38rem 1.25rem;
 }
 
 .side-bar {
-  width: 312px;
+  width: 19.5rem;
   flex-shrink: 0;
   height: auto;
   background-color: var(--main-bg-color);
-  border-radius: 20px;
-  box-shadow: 0px 4px 4px var(--shadow-color);
-  padding-bottom: 30px;
+  border-radius: 1.25rem;
+  box-shadow: 0 0.25rem 0.25rem var(--shadow-color);
+  padding-bottom: 1.88rem;
   position: sticky;
-  top: 70px;
+  top: 4.38rem;
 }
 
-.side-bar-logo,
 .intro-logo {
-  width: 100%;
   height: auto;
-  max-width: 240px; /* Adjust as needed */
+  max-width: 45rem;
   display: block;
   margin: 0 auto;
-  object-fit: contain; /* Ensures the aspect ratio is maintained */
-  aspect-ratio: attr(width) / attr(height); /* Maintains the aspect ratio */
+  object-fit: contain;
+  aspect-ratio: attr(width) / attr(height);
 }
 
 .side-bar-logo {
+  height: auto;
   position: relative;
-  width: 240px;
-  height: 58px;
-  margin-top: 35px;
-  margin-left: 36px;
+  display: block;
+  margin: 0 auto;
+  max-width: 8rem;
+  margin-top: 2.19rem;
 }
 
 .side-bar-profile {
   position: relative;
-  width: 240px;
-  height: 240px;
-  margin-top: 30px; /* 40px에서 60px로 변경 */
-  margin-left: 36px;
+  width: 15rem;
+  height: 15rem;
+  margin-top: 1.88rem;
+  margin-left: 2.25rem;
   background-color: #d9d9d9;
-  border-radius: 120px;
+  border-radius: 50%;
   overflow: hidden;
 }
 
 .side-bar-profile-picture {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   object-position: center 20%;
-  transform: scale(1.1) translateY(5%); /* 1.1배 확대하고 약간 아래로 이동 */
-  transition: transform 0.3s ease; /* 부드러운 변화를 위한 트랜지 추가 */
+  transform: scale(1.1) translateY(5%);
+  transition: transform 0.3s ease;
 }
 
 .side-bar-profile:hover .side-bar-profile-picture {
-  transform: scale(1.15) translateY(2%); /* 호버 시 약간 더 확대 */
+  transform: scale(1.15) translateY(2%);
 }
 
 .name-tag {
   position: relative;
-  width: 241px;
-  height: 103px;
-  margin-top: 40px;
-  margin-left: 36px;
+  width: 15.0625rem;
+  height: 6.4375rem;
+  margin-top: 2.5rem;
+  margin-left: 2.25rem;
 }
 
 .name {
   position: relative;
-  width: 241px;
-  font-family: var(--font-family-bold);
-  font-weight: 700;
+  width: 15.0625rem;
   color: var(--main-organization-color);
-  font-size: 48.1px;
+  font-size: 2.944375rem;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
@@ -130,61 +132,56 @@ body {
 
 .sub-name {
   position: relative;
-  width: 241px;
-  margin-top: 10px;
+  width: 15.0625rem;
+  margin-top: 0.625rem;
   color: #81898f;
-  font-size: 18.1px;
+  font-size: 1.13125rem;
   text-align: center;
-  font-family: var(--font-family-regular);
-  font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
 }
 
 .info {
   position: relative;
-  width: 240px;
-  height: 105px;
-  margin-top: 40px;
-  margin-left: 36px;
+  width: 15rem;
+  height: 6.5625rem;
+  margin-top: 2.5rem;
+  margin-left: 2.25rem;
 }
 
 .info-detail {
   position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .info-detail-icon {
-  width: 16px;
-  height: 16px;
-  margin-right: 9px;
-  filter: var(--main-svg-filter);
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5625rem;
 }
 
 .info-detail-exp {
-  font-family: var(--font-family-regular);
-  font-weight: 400;
   color: var(--secondary-font-color);
-  font-size: 11.2px;
+  font-size: 0.700625rem;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
 }
 
 .strength-div {
   position: relative;
-  width: 239px;
-  height: 92px;
-  margin-top: 30px;
-  margin-left: 36px;
+  width: 14.9375rem;
+  height: 5.75rem;
+  margin-top: 1.875rem;
+  margin-left: 2.25rem;
   display: flex;
   justify-content: space-between;
 }
 
 .strength {
-  width: 72px;
-  height: 92px;
+  width: 4.5rem;
+  height: 5.75rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -192,277 +189,242 @@ body {
 }
 
 .strength-img {
-  width: 70px;
-  height: 68px;
-  margin-bottom: 9px;
-  filter: var(--main-svg-filter);
+  width: 4.375rem;
+  height: 4.25rem;
+  margin-bottom: 0.5625rem;
 }
 
 .strength-text {
-  font-family: var(--font-family-regular);
-  font-weight: 400;
   color: var(--secondary-font-color);
-  font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 1.2;
 }
 
 .line {
   position: relative;
-  width: 241px;
-  height: 1px;
-  margin-top: 29px;
-  margin-left: 36px;
+  width: 15.0625rem;
+  height: 0.05rem;
+  margin-top: 1.8125rem;
+  margin-left: 2.25rem;
   background: rgba(34, 36, 37, 0.2);
 }
 
 .skill-wrap {
   position: relative;
-  width: 241px;
-  margin-top: 31px;
-  margin-left: 36px;
+  width: 15.0625rem;
+  margin-top: 1.9375rem;
+  margin-left: 2.25rem;
 }
 
 .skill-title {
   position: relative;
-  width: 100%;
-  height: 20px; /* 높이 추가 */
-  margin-bottom: 20px; /* 간격 조정 */
+  height: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .skill-title-img {
-  width: 13px;
-  height: 13px;
+  width: 0.8125rem;
+  height: 0.8125rem;
   position: absolute;
   left: 0;
-  top: 2px;
-  filter: var(--main-svg-filter);
+  top: 0.125rem;
 }
 
 .skill-title-text {
   position: absolute;
-  width: 216px;
+  width: 13.5rem;
   top: 0;
-  left: 23px;
-  font-family: var(--font-family-regular);
-  font-weight: 400;
+  left: 1.4375rem;
   color: var(--secondary-font-color);
-  font-size: 11.3px;
+  font-size: 0.70625rem;
   letter-spacing: 0;
   line-height: normal;
 }
 
 .skill-item {
-  width: 100%;
-  margin-bottom: 12px;
-  position: relative; /* 가 */
-  clear: both; /* 추 */
+  margin-bottom: 0.75rem;
+  position: relative;
+  clear: both;
 }
 
 .skill-set {
   position: relative;
-  width: 100%;
   display: flex;
   align-items: center;
 }
 
 .point {
-  width: 7px;
-  height: 7px;
+  width: 0.4375rem;
+  height: 0.4375rem;
   background-color: var(--main-font-color);
-  border-radius: 3.69px;
-  margin-right: 8px;
-  filter: var(--main-svg-filter);
+  border-radius: 0.23125rem;
+  margin-right: 0.5rem;
 }
 
 .skill-text {
-  font-family: var(--font-family-bold);
-  font-weight: 700;
   color: var(--main-font-color);
-  font-size: 12.5px;
+  font-size: 0.78125rem;
   letter-spacing: 0;
   line-height: normal;
 }
 
 .skill-bar {
-  width: 233px;
-  height: 14px;
+  width: 14.5625rem;
+  height: 0.875rem;
   background-color: var(--highlight-color);
-  border-radius: 9.41px;
-  box-shadow: 0px 1.25px 3.95px var(--shadow-color);
-  margin-top: 10px;
+  border-radius: 0.588125rem;
+  box-shadow: 0 0.078125rem 0.24375rem var(--shadow-color);
+  margin-top: 0.625rem;
   position: relative;
 }
 
 .skill-bar-progress {
   position: absolute;
-  height: 14px;
-  left: 7px;
+  height: 0.875rem;
+  left: 0.4375rem;
 }
 
 .skill-bar-rectangle {
   position: absolute;
-  height: 6px;
-  top: 4px;
+  height: 0.375rem;
+  top: 0.25rem;
   left: 0;
   background-color: var(--main-organization-color);
-  border-radius: 8.15px;
+  border-radius: 0.509375rem;
 }
 
 .skill-bar-o1 {
   position: absolute;
-  width: 14px;
-  height: 14px;
+  width: 0.875rem;
+  height: 0.875rem;
   top: 0;
   background-color: var(--highlight-color);
-  border-radius: 6.9px;
-  box-shadow: 0px 0px 2.51px #00000026;
+  border-radius: 0.43125rem;
+  box-shadow: 0 0 0.156875rem #00000026;
 }
 
 .skill-bar-o2 {
   position: absolute;
-  width: 8px;
-  height: 8px;
-  top: 3px;
+  width: 0.5rem;
+  height: 0.5rem;
+  top: 0.1875rem;
   background-color: var(--main-organization-color);
-  border-radius: 3.76px;
+  border-radius: 0.234375rem;
 }
 
 .license-div {
   position: relative;
-  width: 241px;
-  margin-top: 30px; /* line과의 간격 */
-  margin-left: 36px;
+  width: 15.0625rem;
+  margin-top: 1.875rem;
+  margin-left: 2.25rem;
 }
 
 .license-img {
-  width: 16px;
-  height: 11px;
+  width: 1rem;
+  height: 0.71875rem;
   display: inline-block;
   vertical-align: middle;
-  filter: var(--main-svg-filter);
 }
 
 .license-title {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 7px;
-  font-family: var(--font-family-regular);
-  font-weight: 400;
+  margin-left: 0.4375rem;
   color: var(--secondary-font-color);
-  font-size: 11.3px;
+  font-size: 0.70625rem;
   letter-spacing: 0;
   line-height: normal;
 }
 
 .license-wrap {
   position: relative;
-  width: 241px;
-  margin-top: 20px; /* license-title과의 간격 */
+  width: 15.0625rem;
+  margin-top: 1.25rem;
 }
 
 .license-content {
   position: relative;
-  width: 100%;
-  height: 39px;
+  height: 2.4375rem;
   background-color: var(--sub-organization-color);
-  border-radius: 5px;
-  border: 2px solid;
+  border-radius: 0.3125rem;
+  border: 0.125rem solid;
   border-color: var(--main-organization-color);
-  margin-bottom: 5px; /* 각 license-content 사이의 간격 */
+  margin-bottom: 0.3125rem;
 }
 
 .license-text {
   position: absolute;
   top: 50%;
-  left: 10px;
+  left: 0.625rem;
   transform: translateY(-50%);
-  font-family: var(--font-family-bold);
-  font-weight: 700;
   color: var(--main-font-color);
-  font-size: 12.5px;
+  font-size: 0.78125rem;
   letter-spacing: 0;
   line-height: normal;
 }
 
 .education-div {
   position: relative;
-  width: 241px;
-  margin-top: 30px; /* license-div와의 간격 */
-  margin-left: 36px;
+  width: 15.0625rem;
+  margin-top: 1.875rem;
+  margin-left: 2.25rem;
 }
 
 .education-title {
   position: relative;
-  width: 100%;
-  height: 15px;
-  margin-bottom: 20px;
+  height: 0.9375rem;
+  margin-bottom: 1.25rem;
 }
 
 .education-text {
   position: absolute;
-  width: 216px;
+  width: 13.5rem;
   top: 0;
-  left: 25px;
-  font-family: var(--font-family-regular);
-  font-weight: 400;
+  left: 1.5625rem;
   color: var(--secondary-font-color);
-  font-size: 11.2px;
+  font-size: 0.700625rem;
   letter-spacing: 0;
   line-height: normal;
 }
 
 .education-img {
   position: absolute;
-  width: 15px;
-  height: 11px;
-  top: 2px;
+  width: 0.9375rem;
+  height: 0.71875rem;
+  top: 0.125rem;
   left: 0;
-  filter: var(--main-svg-filter);
-}
-
-.education-content {
-  position: relative;
-  width: 100%;
 }
 
 .education-name {
-  width: 100%;
-  font-family: var(--font-family-bold);
-  font-weight: 700;
   color: var(--main-font-color);
-  font-size: 16.4px;
+  font-size: 1.0275rem;
   line-height: normal;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .education-detail {
-  width: 100%;
-  font-family: var(--font-family-regular);
-  font-weight: 400;
   color: var(--secondary-font-color);
-  font-size: 11.2px;
+  font-size: 0.700625rem;
   line-height: normal;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .main-content {
-  width: calc(100% - 352px); /* 312px for sidebar + 40px for gap */
-  margin-left: 40px;
+  width: calc(100% - 20.25rem);
+  margin-left: 2.5rem;
 }
 .intro-div {
-  width: 999px;
-  height: 471px;
-  border-radius: 15.04px;
+  width: 62.4375rem;
+  height: 29.4375rem;
+  border-radius: 0.939375rem;
   overflow: hidden;
-  box-shadow: 0px 4.01px 20.06px #00000033;
-  background: var(
-    --highlight-color
-  ); /* Add this line for solid white background */
+  box-shadow: 0 0.250625rem 1.253125rem #00000033;
+  background: var(--highlight-color);
 }
 
 .intro-frame {
   position: relative;
-  height: 471px;
+  height: 29.4375rem;
   background: linear-gradient(
     180deg,
     rgba(34, 36, 37, 0) 0%,
@@ -473,159 +435,145 @@ body {
 .intro-logo {
   position: absolute;
   opacity: 20%;
-  width: 641px;
-  height: 210px;
-  top: 261px;
-  left: 126px;
+  width: 40.0703125rem;
+  height: 13.125rem;
+  top: 16.31875rem;
+  left: 7.875rem;
 }
 
 .intro-picture-frame {
   position: absolute;
-  width: 356px;
-  height: 356px;
-  top: 57px;
-  left: 579px;
+  width: 22.25rem;
+  height: 22.25rem;
+  top: 3.578125rem;
+  left: 36.1875rem;
   background-color: var(--highlight-color);
 }
 
 .intro-picture {
   position: absolute;
-  width: 356px;
-  height: 356px;
+  width: 22.25rem;
+  height: 22.25rem;
   top: 0;
   left: 0;
-  object-position: center 20%; /* Added this line */
+  object-position: center 20%;
   object-fit: cover;
 }
 
 .intro-star {
   position: absolute;
-  width: 104px;
-  height: 104px;
-  top: 72px;
-  left: 526px;
-  filter: var(--main-svg-filter);
+  width: 6.5rem;
+  height: 6.5rem;
+  top: 4.5rem;
+  left: 32.90625rem;
 }
 
 .intro-content {
   position: absolute;
-  width: 465px;
-  height: 255px;
-  top: 118px;
-  left: 52px;
+  width: 29.1rem;
+  height: 15.9rem;
+  top: 7.4rem;
+  left: 3.3rem;
 }
 
 .intro-quote {
   position: absolute;
-  width: 50px;
-  height: 41px;
+  width: 3.1rem;
+  height: 2.6rem;
   top: 0;
   left: 0;
-  filter: var(--main-svg-filter);
 }
 
 .intro-text {
   position: absolute;
-  width: 461px;
-  top: 56px;
+  width: 28.8rem;
+  top: 3.5rem;
   left: 0;
-  font-family: var(--font-family-bold);
-  font-weight: 700;
   color: var(--main-font-color);
-  font-size: 36.1px;
+  font-size: 2.3rem;
   letter-spacing: 0;
   line-height: normal;
 }
 
 .intro-text-detail {
   position: absolute;
-  width: 461px;
-  top: 171px;
+  width: 28.8rem;
+  top: 10.9rem;
   left: 0;
-  font-family: var(--font-family-regular);
-  font-weight: 400;
   color: var(--secondary-font-color);
-  font-size: 15px;
+  font-size: 0.9rem;
   letter-spacing: 0;
   line-height: normal;
 }
 
 .intro-row-line {
   position: absolute;
-  width: 999px;
-  height: 1px;
-  top: 56px;
+  width: 62.4rem;
+  height: 0.05rem;
+  top: 3.5rem;
   left: 0;
   background: var(--main-font-color);
 }
 
 .intro-column-line {
   position: absolute;
-  width: 1px;
-  height: 471px;
+  width: 0.05rem;
+  height: 29.4rem;
   top: 0;
-  left: 578px;
+  left: 36.2rem;
   background: var(--main-font-color);
 }
 
 .experience-div {
   position: relative;
-  width: 999px;
-  margin: 50px 0px;
+  width: 62.4rem;
+  margin: 3.1rem 0;
 }
 
 .experience-title {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.3rem;
 }
 
 .experience-img {
-  width: 27px;
-  height: 22px;
-  margin-right: 8px;
-  filter: var(--main-svg-filter);
+  width: 1.7rem;
+  height: 1.4rem;
+  margin-right: 0.5rem;
 }
 
 .experience-text {
-  font-family: var(--font-family-bold);
-  font-weight: 700;
   color: var(--main-font-color);
-  font-size: 23.1px;
+  font-size: 1.4rem;
   letter-spacing: 0;
   line-height: normal;
 }
 
 .experience-cards-container {
   position: relative;
-  width: 100%;
-  height: 271px;
+  height: 17rem;
   overflow: hidden;
 }
 
 .experience-card-frame {
   position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 64px;
+  padding: 0 4rem;
   transition: transform 0.5s ease-in-out;
 }
 
 .experience-card {
   position: relative;
-  width: 315px;
-  height: 271px;
-  border-radius: 13.443px;
+  width: 19.7rem;
+  height: 17rem;
+  border-radius: 0.8rem;
   background: var(--sub-organization-color);
-  padding: 21px 0 0 0;
+  padding: 1.3rem 0 0 0;
   transition: transform 0.5s ease-in-out;
   min-width: 33.33%;
 }
 
-#card1 {
+#card1,
+#card3 {
   transform: scale(0.75);
   opacity: 0.3;
 }
@@ -633,11 +581,6 @@ body {
 #card2 {
   transform: scale(1);
   opacity: 1;
-}
-
-#card3 {
-  transform: scale(0.75);
-  opacity: 0.3;
 }
 
 .experience-prev,
@@ -650,75 +593,62 @@ body {
 }
 
 .experience-prev {
-  left: 10px;
+  left: 0.6rem;
 }
 
 .experience-next {
-  right: 10px;
+  right: 0.6rem;
 }
 
 .experience-card-period-wrapper {
-  width: 54px;
-  height: 14px;
-  border-radius: 7px;
+  width: 3.4rem;
+  height: 0.9rem;
+  border-radius: 0.4rem;
   background: var(--main-organization-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto 7px; /* 아래쪽 마진으로 company와의 간격 유지 */
+  margin: 0 auto 0.4rem;
 }
 
 .experience-card-period {
-  font-family: var(--font-family-regular);
-  font-weight: 400;
   color: var(--highlight-color);
-  font-size: 7.8px;
+  font-size: 0.5rem;
   line-height: normal;
   white-space: nowrap;
   letter-spacing: 0;
 }
 
 .experience-card-company {
-  width: 100%;
   text-align: center;
-  font-family: var(--font-family-bold);
-  font-weight: 800;
   color: var(--main-font-color);
-  font-size: 24.2px;
+  font-size: 1.5rem;
   line-height: normal;
   letter-spacing: 0;
 }
 
 .experience-card-term {
-  width: 100%;
   text-align: center;
   color: var(--secondary-font-color);
-  font-size: 11.1px;
-  font-family: var(--font-family-regular);
-  font-weight: 400;
+  font-size: 0.7rem;
   letter-spacing: 0;
   line-height: normal;
-  margin-top: 5px;
+  margin: 0 auto;
 }
 
 .experience-card-team {
   position: absolute;
-  width: 113px;
-  height: 20px;
-  top: 107px;
-  left: 33px;
+  width: 7.1rem;
+  height: 1.2rem;
+  top: 6.7rem;
+  left: 2.1rem;
   background-color: var(--main-organization-color);
-  border-radius: 13.09px;
+  border-radius: 0.8rem;
 }
 
 .experience-card-team-name {
   position: absolute;
-  top: 2px;
-  left: 12px;
-  font-family: var(--font-family-bold);
-  font-weight: 700;
+  top: 0.1rem;
+  left: 0.7rem;
   color: var(--highlight-color);
-  font-size: 12px;
+  font-size: 0.7rem;
   line-height: normal;
   white-space: nowrap;
   letter-spacing: 0;
@@ -726,22 +656,20 @@ body {
 
 .experience-card-project {
   position: absolute;
-  width: 113px;
-  height: 20px;
-  top: 171px;
-  left: 33px;
+  width: 7.1rem;
+  height: 1.2rem;
+  top: 10.8rem;
+  left: 2.1rem;
   background-color: var(--main-organization-color);
-  border-radius: 13.09px;
+  border-radius: 0.8rem;
 }
 
 .experience-card-project-name {
   position: absolute;
-  top: 2px;
-  left: 17px;
-  font-family: var(--font-family-bold);
-  font-weight: 700;
+  top: 0.1rem;
+  left: 1.1rem;
   color: var(--highlight-color);
-  font-size: 12px;
+  font-size: 0.7rem;
   line-height: normal;
   white-space: nowrap;
   letter-spacing: 0;
@@ -749,83 +677,75 @@ body {
 
 .experience-card-task {
   position: absolute;
-  width: 249px;
-  height: 19px;
-  top: 138px;
-  left: 33px;
+  width: 15.6rem;
+  height: 1.2rem;
+  top: 8.6rem;
+  left: 2.1rem;
 }
 
 .experience-card-task-text {
-  width: 229px;
-  height: 19px;
+  width: 14.3rem;
+  height: 1.2rem;
   top: 0;
-  left: 18px;
-  font-family: var(--font-family-regular);
-  font-weight: 400;
+  left: 1.1rem;
   color: var(--main-font-color);
-  font-size: 12px;
+  font-size: 0.7rem;
   line-height: normal;
   position: absolute;
   letter-spacing: 0;
 }
 
 .experience-card-task-term {
-  width: 202px;
-  top: 203px;
-  left: 33px;
+  position: relative;
+  width: 12.6rem;
+  top: 12.5rem;
+  left: 2.1rem;
   color: var(--main-font-color);
-  font-size: 11.1px;
+  font-size: 0.7rem;
   white-space: nowrap;
   position: absolute;
-  font-family: var(--font-family-regular);
-  font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
 }
 
 .experience-card-task-detail {
   position: absolute;
-  width: 249px;
-  height: 20px;
-  top: 227px;
-  left: 33px;
+  width: 15.6rem;
+  height: 1.2rem;
+  top: 13.5rem;
+  left: 2.1rem;
   display: flex;
   align-items: center;
 }
 
 .experience-card-task-detail-text {
-  font-family: var(--font-family-regular);
-  font-weight: 400;
   color: var(--main-font-color);
-  font-size: 12px;
+  font-size: 0.7rem;
   line-height: normal;
   letter-spacing: 0;
 }
 
 .project-div {
   position: relative;
-  width: 999px;
-  margin: 50px 0px;
+  width: 62.4rem;
+  margin: 3.1rem 0;
 }
 
 .project-title {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 1.9rem;
 }
 
 .project-title-img {
-  width: 25px;
-  height: 25px;
-  margin-right: 9px;
-  filter: var(--main-svg-filter);
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 0.6rem;
 }
 
 .project-title-text {
-  font-family: var(--font-family-bold);
-  font-weight: 700;
   color: var(--main-font-color);
-  font-size: 23.1px;
+  font-size: 1.4rem;
   letter-spacing: 0;
   line-height: normal;
 }
@@ -833,15 +753,16 @@ body {
 .project-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 27px;
+  gap: 1.7rem;
 }
 
 .project {
-  width: 486px;
-  height: 408px;
+  width: 30rem;
+  height: 25.5rem;
   position: relative;
   cursor: pointer;
   transition: transform 0.3s ease;
+  margin-bottom: 1.6rem;
 }
 
 .project:hover {
@@ -849,48 +770,44 @@ body {
 }
 
 .project-main-img {
-  width: 486px;
-  height: 288px;
+  width: 30.4rem;
+  height: 20rem;
   background-color: var(--main-organization-color);
-  border-radius: 15.04px 15.04px 0px 0px;
+  border-radius: 0.9rem 0.9rem 0 0;
 }
 
 .project-content {
-  width: 486px;
-  height: 120px;
-  border-radius: 0px 0px 15.04px 15.04px;
-  border: 2.01px solid var(--main-organization-color);
-  padding: 20px 26px;
+  width: 30.4rem;
+  height: 7.5rem;
+  border-radius: 0 0 0.9rem 0.9rem;
+  border: 0.1rem solid var(--main-organization-color);
+  padding: 1.3rem 1.6rem;
 }
 
 .project-content-title {
-  font-family: var(--font-family-bold);
-  font-weight: 800;
   color: var(--main-font-color);
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
 }
 
 .project-content-text {
-  font-family: var(--font-family-regular);
-  font-weight: 400;
   color: var(--secondary-font-color);
-  font-size: 11.1px;
-  line-height: 20.1px;
+  font-size: 0.7rem;
+  line-height: 1.2rem;
   letter-spacing: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 64rem) {
   .frame {
     flex-direction: column;
-    padding: 20px;
+    padding: 1.2rem;
   }
 
   .side-bar,
   .main-content {
     width: 100%;
-    max-width: 600px;
-    margin: 0 auto 20px;
+    max-width: 37.5rem;
+    margin: 0 auto 1.2rem;
   }
 
   .side-bar {
@@ -902,20 +819,13 @@ body {
     margin-left: 0;
   }
 
-  .intro-div,
-  .experience-div,
-  .project-div {
-    width: 100%;
-  }
-
   .experience-cards-container {
     flex-direction: column;
     align-items: center;
   }
 
   .experience-card {
-    width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 1.2rem;
   }
 
   .project-container {
@@ -925,6 +835,27 @@ body {
 
   .project {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 1.3rem;
   }
+}
+
+.absolute-position {
+  position: absolute;
+  top: var(--top, 0);
+  left: var(--left, 0);
+}
+
+.size-full {
+  width: 100%;
+  height: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
