@@ -71,8 +71,45 @@
     display: none;
   }
 
-  .intro-div {
+  .intro-div,
+  .intro-frame {
+    text-align: center;
+    height: 12rem;
+  }
+
+  .intro-logo,
+  .intro-picture-frame,
+  .intro-row-line,
+  .intro-column-line,
+  .intro-star {
     display: none;
+  }
+
+  .intro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .intro-quote {
+    width: 30px;
+    margin: 20px;
+  }
+
+  .intro-text {
+    font-size: 16px;
+    width: 100%;
+    word-wrap: break-word;
+  }
+
+  .intro-text-detail {
+    font-size: 14px;
+    width: 100%;
+    word-wrap: break-word;
+    top: 7rem;
   }
 
   .exp-div {
