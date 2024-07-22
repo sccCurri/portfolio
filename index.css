@@ -859,3 +859,242 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .background {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .frame {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side-bar,
+  .intro-div,
+  .exp-div,
+  .proj-div {
+    position: static;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+
+  .side-bar {
+    padding: 20px;
+    text-align: center;
+  }
+  .side-bar-logo,
+  .side-bar-profile,
+  .name-tag,
+  .info,
+  .strength-div,
+  .line,
+  .skill-wrap,
+  .license-div,
+  .education-div {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .education-text,
+  .skill-title-text {
+    position: absolute;
+    left: 0;
+  }
+  .skill-title-text,
+  .education-text,
+  .license-title {
+    display: flex;
+    align-items: center;
+    left: 0;
+    font-size: 14px;
+    font-family: var(--font-family-bold);
+    text-align: left;
+  }
+  .license-title {
+    margin-left: 0;
+  }
+  .skill-title-img,
+  .education-img,
+  .license-img {
+    margin-right: 10px;
+    display: none;
+  }
+
+  .intro-div,
+  .intro-frame {
+    text-align: center;
+    height: 12rem;
+  }
+
+  .intro-logo,
+  .intro-picture-frame,
+  .intro-row-line,
+  .intro-column-line,
+  .intro-star {
+    display: none;
+  }
+
+  .intro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .intro-quote {
+    width: 30px;
+    margin: 20px;
+  }
+
+  .intro-text {
+    font-size: 16px;
+    width: 100%;
+    word-wrap: break-word;
+  }
+
+  .intro-text-detail {
+    font-size: 14px;
+    width: 100%;
+    word-wrap: break-word;
+    top: 7rem;
+  }
+
+  .exp-div {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .exp-cards-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .exp-card-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .exp-card {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    margin: 20px 0;
+    transform: scale(1);
+    opacity: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .exp-card-period-wrapper {
+    margin: 0 0 10px;
+  }
+
+  .exp-card-company,
+  .exp-card-term,
+  .exp-card-team-name,
+  .exp-card-task-text,
+  .exp-card-task-term,
+  .exp-card-proj-name,
+  .exp-card-task-detail-text {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .exp-card-task,
+  .exp-card-task-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .point {
+    margin-right: 5px;
+  }
+
+  #card1,
+  #card3 {
+    display: none;
+  }
+
+  .exp-prev,
+  .exp-next {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+  }
+
+  .exp-prev {
+    left: -15px;
+  }
+
+  .exp-next {
+    right: -15px;
+  }
+
+  .proj-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .proj {
+    max-width: 400px;
+    margin: 0 auto 20px;
+    height: auto;
+  }
+
+  .proj-main-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .proj-content {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    background-color: var(--sub-organization-color);
+    border-radius: 0 0 15px 15px;
+  }
+
+  .proj-content-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .proj-content-text {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}

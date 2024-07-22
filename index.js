@@ -124,7 +124,7 @@ function updateCards() {
 }
 
 function moveCards(direction) {
-  const frame = document.querySelector(".experience-card-frame");
+  const frame = document.querySelector(".exp-card-frame");
   frame.style.transition = "transform 0.5s ease-in-out";
 
   if (direction === "next") {

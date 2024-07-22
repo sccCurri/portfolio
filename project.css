@@ -1,12 +1,11 @@
 :root {
   --main-bg-color: #fff;
   --main-font-color: #1d1f20;
-  --secondary-font-color: #5f666b;
-  --highlight-color: #ffffff;
-  --shadow-color: rgba(0, 0, 0, 0.2);
-  --font-family-main: "NanumSquareOTF", Helvetica, Arial, sans-serif;
-  --font-family-bold: "NanumSquareOTF-Bold", Helvetica;
-  --font-family-regular: "NanumSquareOTF-Regular", Helvetica;
+  font-family: "NanumSquareOTF-Regular", Helvetica;
+  font-weight: 400;
+  --card-margin: 6.1rem 6.8rem 0;
+  --card-height: 30.1rem;
+  --card-border-radius: 0.9rem;
 }
 
 body {
@@ -15,23 +14,23 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll; /* 모바일 성능 개선 */
   overflow-x: hidden; /* 가로 스크롤 방지 */
 }
 .project-card {
-  margin: 98px 109px 0;
-  height: 481px;
-  border-radius: 15px;
+  margin: var(--card-margin);
+  height: var(--card-height);
+  border-radius: var(--card-border-radius);
   background: var(--main-bg-color);
-  box-shadow: 0px 4px 20px 0px var(--shadow-color);
+  box-shadow: 0 0.3rem 1.3rem 0 rgba(0, 0, 0, 0.2);
   display: grid;
   grid-template-areas:
     "top top top top"
     "name name image ."
     "icons tool image ."
     "bottom bottom bottom bottom";
-  grid-template-rows: 50px 242px 132px 50px;
-  grid-template-columns: 250px 250px 1fr 50px;
+  grid-template-rows: 3.1rem 15.1rem 8.3rem 3.1rem;
+  grid-template-columns: 15.6rem 15.6rem 1fr 3.1rem;
   overflow: hidden;
 }
 
@@ -60,39 +59,38 @@ body {
 
 .project-card-name {
   grid-area: name;
-  padding: 10px;
+  padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 24px;
+  gap: 1.5rem;
   border-left: none;
-  padding: 0px 24px;
 }
 
 .project-card-image {
   grid-area: image;
-  padding: 10px;
+  padding: 0.6rem;
   border-right: none;
   border-bottom: none;
 }
 
 .project-card-icons {
   grid-area: icons;
-  padding: 10px;
+  padding: 0.6rem;
   border-left: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px; /* 각 행 사이의 간격 */
-  padding-left: 24px;
+  gap: 0.6rem; /* 각 행 사이의 간격 */
+  padding-left: 1.5rem;
   border-bottom: none;
 }
 
 .project-row {
   display: flex;
   align-items: center;
-  gap: 10px; /* 아이콘과 텍스트 사이의 간격 */
-  margin-bottom: 4px;
+  gap: 0.6rem; /* 아이콘과 텍스트 사이의 간격 */
+  margin-bottom: 0.3rem;
 }
 
 .project-row:last-child {
@@ -100,21 +98,21 @@ body {
 }
 
 .project-icon {
-  width: 20px; /* 아이콘 크기 조정 */
-  height: 20px;
+  width: 1.3rem; /* 아이콘 크기 조정 */
+  height: 1.3rem;
 }
 
 .project-content-detail {
-  font-size: 14px; /* 텍스트 크기 조정 */
+  font-size: 0.9rem; /* 텍스트 크기 조정 */
 }
 
 .project-card-tool {
   grid-area: tool;
-  padding: 10px;
+  padding: 0.6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 12px;
+  gap: 0.8rem;
   border-bottom: none;
 }
 .project-image {
@@ -123,51 +121,29 @@ body {
 }
 .project-title {
   color: var(--main-font-color);
-  font-family: var(--font-family-main);
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 800;
+  font-size: 2.3rem;
   line-height: normal;
 }
 
 .project-content {
-  color: var(--secondary-font-color);
-  font-family: var(--font-family-main);
-  font-size: 11.05px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px; /* 199.091% */
+  color: #4a4a4a; /* 더 높은 대비를 위해 색상 조정 */
+  font-size: 0.7rem;
+  line-height: 1.4rem; /* 199.091% */
 }
 
 .project-content-detail {
-  color: var(--secondary-font-color);
-  font-family: var(--font-family-main);
-  font-size: 10.298px;
-  font-style: normal;
-  font-weight: 400;
+  color: #4a4a4a; /* 더 높은 대비를 위해 색상 조정 */
+  font-size: 0.6rem;
   line-height: normal;
 }
 .project-tool-detail {
   color: var(--main-font-color);
-  font-family: var(--font-family-main);
-  font-size: 10.298px;
-  font-style: normal;
-  font-weight: 800;
+  font-size: 0.6rem;
   line-height: normal;
 }
 .project-tool-point {
-  width: 8px;
-  height: 8px;
-}
-.project-div-image {
-  width: 544px;
-  height: 306px;
-  flex-shrink: 0;
-  border-radius: 15px;
-  object-fit: cover;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  width: 0.5rem;
+  height: 0.5rem;
 }
 
 .project-pictures {
@@ -175,7 +151,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: 50px;
+  margin: 3.1rem;
   overflow: hidden;
 }
 
@@ -205,10 +181,10 @@ body {
 }
 
 .project-div-image {
-  width: 100%;
-  height: auto;
+  width: 34rem;
+  height: 19.1rem;
   display: block;
-  border-radius: 15px;
+  border-radius: 0.9rem;
 }
 
 .project-prev,
@@ -219,11 +195,11 @@ body {
 }
 
 .project-prev {
-  left: 10px;
+  left: 0.6rem;
 }
 
 .project-next {
-  right: 10px;
+  right: 0.6rem;
 }
 
 .detail-card {
@@ -232,8 +208,8 @@ body {
   grid-template-areas:
     "a list ts b"
     "c d d e";
-  grid-template-columns: 109px 1fr 1fr 109px;
-  grid-template-rows: min-content 34px;
+  grid-template-columns: 6.8rem 1fr 1fr 6.8rem;
+  grid-template-rows: min-content 2.1rem;
   overflow: hidden;
 }
 .detail-card > * {
@@ -261,77 +237,171 @@ body {
 
 .detail-card-list {
   grid-area: list;
-  padding: 50px;
+  padding: 3.1rem;
   display: flex;
+  font-size: 0.8rem;
   flex-direction: column;
   justify-content: center;
 }
 .detail-card-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.6rem;
 }
 .detail-card-ts {
   grid-area: ts;
-  padding: 50px;
+  padding: 3.1rem;
+  font-size: 0.8rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .detail-card-title {
   display: flex;
-  padding: 4px 20px;
+  padding: 0.3rem 1.3rem;
   justify-content: center;
   align-items: center;
-  gap: 13px;
-  border-radius: 28px;
+  gap: 0.8rem;
+  border-radius: 1.8rem;
+  font-size: 0.8rem;
   background: var(--main-font-color);
   color: white;
-  width: 70px;
-  margin: 15px 0;
+  width: 4.4rem;
+  margin: 0.9rem 0;
 }
 .project-card-detail {
   color: var(--main-font-color);
-  font-family: var(--font-family-main);
-  font-size: 16.745px;
-  font-style: normal;
-  font-weight: 400;
+  font-size: 0.8rem;
   line-height: normal;
 }
 .project-card-ex {
-  color: var(--secondary-font-color);
+  color: #4a4a4a; /* 더 높은 대비를 위해 색상 조정 */
   font-family: var(--font-family-main);
-  font-size: 15.457px;
-  font-style: normal;
-  font-weight: 400;
+  font-size: 0.8rem;
   line-height: normal;
-  margin: 12px 0;
+  margin: 0.8rem 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 64rem) {
+  /* 태블릿 대응 추가 */
   .project-card {
-    margin: 20px;
+    margin: 3rem;
+    height: auto;
+    grid-template-areas:
+      "top top"
+      "name image"
+      "icons tool"
+      "bottom bottom";
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+  }
+}
+
+@media (max-width: 48rem) {
+  .project-card {
+    margin: 1.3rem;
+    grid-template-areas:
+      "image"
+      "name"
+      "icons"
+      "tool";
+    grid-template-rows: auto auto auto auto;
     grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .project-card-image {
+    grid-area: image;
+    width: 100%;
+    height: auto;
+  }
+
+  .project-card-name {
+    grid-area: name;
+  }
+
+  .project-card-icons {
+    grid-area: icons;
+  }
+
+  .project-card-tool {
+    grid-area: tool;
   }
 
   .project-card-name,
   .project-card-image,
   .project-card-icons,
   .project-card-tool {
-    grid-area: auto;
-    padding: 10px;
+    padding: 0.6rem;
+    border-right: none;
+    border-bottom: 1px solid #000;
+  }
+
+  .project-card-tool {
+    border-bottom: none;
+  }
+
+  .project-card-icons,
+  .project-card-tool {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .project-row {
+    width: 100%;
+  }
+
+  .project-pictures {
+    margin: 1.5rem;
+  }
+
+  .project-picture-wrapper {
+    width: 100%;
+  }
+  .project-div-image {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.9rem;
+  }
+  .project-picture.side {
+    display: none;
+  }
+
+  .project-picture.center {
+    width: 100%;
+  }
+
+  .detail-card {
+    grid-template-areas:
+      "a list b"
+      "c ts d"
+      "e e e";
+    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-rows: auto auto 2.1rem;
+  }
+
+  .detail-card-list,
+  .detail-card-ts {
+    padding: 1.5rem;
   }
 }
 
-/* Example of improving color contrast */
-.project-card-detail {
-  color: #1d1f20; /* Ensure this color has sufficient contrast */
-}
-
-/* Example of adding focus styles for accessibility */
-.project-prev:focus,
-.project-next:focus {
+/* 포커스 가능한 요소에 대한 스타일 일관성 */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
   outline: 2px solid var(--highlight-color);
   outline-offset: 2px;
+}
+
+/* 접근성 개선을 위한 추가 스타일 */
+.project-content,
+.project-content-detail,
+.project-card-ex {
+  color: #4a4a4a; /* 더 높은 대비를 위해 색상 조정 */
 }
