@@ -97,20 +97,16 @@ function updateCards() {
     const card = cards[cardIndex];
     const cardElement = document.getElementById(`card${i + 1}`);
 
-    cardElement.querySelector(".experience-card-period").textContent =
-      card.period;
-    cardElement.querySelector(".experience-card-company").textContent =
-      card.company;
-    cardElement.querySelector(".experience-card-term").textContent = card.term;
-    cardElement.querySelector(".experience-card-team-name").textContent =
-      card.team;
-    cardElement.querySelector(".experience-card-task-text").textContent =
-      card.task;
-    cardElement.querySelector(".experience-card-task-term").textContent =
+    cardElement.querySelector(".exp-card-period").textContent = card.period;
+    cardElement.querySelector(".exp-card-company").textContent = card.company;
+    cardElement.querySelector(".exp-card-term").textContent = card.term;
+    cardElement.querySelector(".exp-card-team-name").textContent = card.team;
+    cardElement.querySelector(".exp-card-task-text").textContent = card.task;
+    cardElement.querySelector(".exp-card-task-term").textContent =
       card.taskTerm;
-    cardElement.querySelector(".experience-card-project-name").textContent =
+    cardElement.querySelector(".exp-card-project-name").textContent =
       card.project;
-    cardElement.querySelector(".experience-card-task-detail-text").textContent =
+    cardElement.querySelector(".exp-card-task-detail-text").textContent =
       card.projectDetail;
 
     if (i === 1) {
