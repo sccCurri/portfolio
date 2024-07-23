@@ -1,14 +1,73 @@
 document.addEventListener("DOMContentLoaded", function () {
-  setupSkillBars(); // Call setupSkillBars after setting language
-  setLanguage();
+  setupSkillBars();
+  setLanguageAndMode();
   updateCards();
 });
-function setLanguage() {
+
+function setLanguageAndMode() {
   const lang = getUrlParameter("lang") || "ko";
-  if (lang === "en") {
-    window.location.href = "index_en.html" + window.location.search;
+  const mode = getUrlParameter("mode");
+
+  // 현재 페이지가 이미 올바른 언어 버전인지 확인
+  const currentPage = window.location.pathname.split("/").pop();
+  const isCorrectPage =
+    (lang === "en" && currentPage === "index_en.html") ||
+    (lang === "ko" && currentPage === "index.html");
+
+  // 언어 설정이 필요한 경우에만 리디렉션
+  if (!isCorrectPage) {
+    const targetPage = lang === "en" ? "index_en.html" : "index.html";
+    window.location.href = targetPage + getUpdatedQueryString(lang, mode);
+    return; // 리디렉션 후 함수 종료
+  }
+
+  // 모드 설정 (기존 코드 유지)
+  if (mode === "sparta") {
+    document.documentElement.style.setProperty(
+      "--main-organization-color",
+      "#E8344E"
+    );
+    document.documentElement.style.setProperty(
+      "--sub-organization-color",
+      "#FAD6DC"
+    );
+    document.documentElement.style.setProperty(
+      "--main-svg-filter",
+      "invert(30%) sepia(44%) saturate(5563%) hue-rotate(335deg) brightness(96%) contrast(89%)"
+    );
+    updateLogos("image/sparta-logo.png");
   }
 }
+
+function getUrlParameter(name) {
+  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+  var results = regex.exec(location.search);
+  return results === null
+    ? ""
+    : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+function getUpdatedQueryString(lang, mode) {
+  let queryString = "";
+  if (mode) {
+    queryString += `?mode=${mode}`;
+  }
+  return queryString;
+}
+
+function updateLogos(logoSrc) {
+  const sideBarLogo = document.querySelector(".side-bar-logo");
+  const introLogo = document.querySelector(".intro-logo");
+
+  if (sideBarLogo) {
+    sideBarLogo.src = logoSrc;
+  }
+  if (introLogo) {
+    introLogo.src = logoSrc;
+  }
+}
+
 function setupSkillBars() {
   const skillBars = document.querySelectorAll(".skill-bar");
   skillBars.forEach((bar) => {
@@ -28,51 +87,6 @@ function setupSkillBars() {
   });
 }
 
-function getUrlParameter(name) {
-  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-  var results = regex.exec(location.search);
-  return results === null
-    ? ""
-    : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-// Function to get URL parameters
-function getUrlParameter(name) {
-  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-  var results = regex.exec(location.search);
-  return results === null
-    ? ""
-    : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
-// Get the 'mode' parameter from the URL
-var mode = getUrlParameter("mode");
-
-// If the mode is 'sparta', change the --main-font-color to E8344E and the logos to sparta-logo
-if (mode === "sparta") {
-  document.documentElement.style.setProperty(
-    "--main-organization-color",
-    "#E8344E"
-  );
-  document.documentElement.style.setProperty(
-    "--sub-organization-color",
-    "#FAD6DC"
-  );
-  document.documentElement.style.setProperty(
-    "--main-svg-filter",
-    "invert(30%) sepia(44%) saturate(5563%) hue-rotate(335deg) brightness(96%) contrast(89%)"
-  );
-  var sideBarLogo = document.querySelector(".side-bar-logo");
-  if (sideBarLogo) {
-    sideBarLogo.src = "image/sparta-logo.png";
-  }
-
-  var introLogo = document.querySelector(".intro-logo");
-  if (introLogo) {
-    introLogo.src = "image/sparta-logo.png";
-  }
-}
 const cards = [
   {
     period: "00년 00개월",
