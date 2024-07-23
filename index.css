@@ -321,7 +321,7 @@ body {
 .license-div {
   position: relative;
   width: 15.0625rem;
-  margin-top: 1.5rem; /* 상단 마진 조정 */
+  margin-top: 2.5rem;
   margin-left: 2.25rem;
 }
 
@@ -359,10 +359,8 @@ body {
 }
 
 .license-text {
-  position: absolute;
-  top: 50%;
-  left: 0.625rem;
-  transform: translateY(-50%);
+  position: relative;
+  padding: 0.625rem;
   color: var(--main-font-color);
   font-size: 0.78125rem;
   letter-spacing: 0;
@@ -372,21 +370,20 @@ body {
 .education-div {
   position: relative;
   width: 15.0625rem;
-  margin-top: 1.5rem; /* 상단 마진 조정 */
+  margin-top: 2.5rem;
   margin-left: 2.25rem;
 }
 
 .education-title {
   position: relative;
   height: 0.9375rem;
-  margin-bottom: 1.25rem;
+  margin: 4rem 0 1rem 0;
 }
 
 .education-text {
-  position: absolute;
+  position: relative;
   width: 13.5rem;
-  top: 0;
-  left: 1.5625rem;
+  margin-left: 1.5625rem;
   color: var(--secondary-font-color);
   font-size: 0.700625rem;
   letter-spacing: 0;
@@ -406,6 +403,7 @@ body {
   font-size: 1.0275rem;
   line-height: normal;
   margin-bottom: 0.625rem;
+  text-align: left;
 }
 
 .education-detail {
@@ -413,6 +411,7 @@ body {
   font-size: 0.700625rem;
   line-height: normal;
   margin-bottom: 1.25rem;
+  text-align: left;
 }
 
 .main-content {
@@ -613,10 +612,6 @@ body {
   margin-bottom: 0.3rem;
 }
 
-.exp-card-task-detail {
-  margin-top: auto; /* 이 부분을 추가하여 task-detail을 카드 하단으로 밀어냅니다 */
-}
-
 .exp-card-task-detail-text {
   font-size: 0.6rem;
   line-height: 1.2;
@@ -777,7 +772,6 @@ body {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  margin-top: auto;
 }
 
 .exp-card-task-detail-text {
@@ -977,14 +971,12 @@ body {
   .skill-title-text,
   .license-title {
     position: absolute;
-    left: 0;
   }
   .skill-title-text,
   .education-text,
   .license-title {
     display: flex;
     align-items: center;
-    left: 0;
     font-size: 14px;
     font-family: var(--font-family-bold);
     text-align: left;
@@ -995,8 +987,19 @@ body {
   .skill-title-img,
   .education-img,
   .license-img {
+    position: absolute;
+    left: 0;
     margin-right: 10px;
-    display: none;
+    /* display: none; 이 줄을 제거하거나 주석 처리 */
+  }
+
+  .skill-title,
+  .education-title,
+  .license-div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 20px; /* 아이콘과 텍스트의 높이에 맞게 조정 */
   }
 
   .intro-div,
@@ -1042,8 +1045,6 @@ body {
   }
 
   .exp-div {
-    width: 90%;
-    max-width: 400px;
     margin: 20px auto;
     padding: 0;
     display: flex;
@@ -1103,10 +1104,8 @@ body {
 
   .exp-card-company,
   .exp-card-term,
-  .exp-card-team-name,
   .exp-card-task-text,
   .exp-card-task-term,
-  .exp-card-proj-name,
   .exp-card-task-detail-text {
     width: 100%;
     margin-bottom: 10px;
@@ -1182,5 +1181,13 @@ body {
   .proj-content-text {
     font-size: 12px;
     line-height: 1.4;
+  }
+
+  .info-detail {
+    justify-content: flex-start;
+  }
+
+  .info-detail-exp {
+    text-align: left;
   }
 }
