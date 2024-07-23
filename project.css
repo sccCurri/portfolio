@@ -6,6 +6,7 @@
   --card-margin: 6.1rem 6.8rem 0;
   --card-height: 30.1rem;
   --card-border-radius: 0.9rem;
+  --text-color-secondary: #4a4a4a;
 }
 
 body {
@@ -103,7 +104,7 @@ body {
 }
 
 .project-content-detail {
-  font-size: 0.9rem; /* 텍스트 크기 조정 */
+  font-size: 0.6rem; /* 텍스트 크기 조정 */
 }
 
 .project-card-tool {
@@ -126,13 +127,13 @@ body {
 }
 
 .project-content {
-  color: #4a4a4a; /* 더 높은 대비를 위해 색상 조정 */
+  color: var(--text-color-secondary); /* 더 높은 대비를 위해 색상 조정 */
   font-size: 0.7rem;
   line-height: 1.4rem; /* 199.091% */
 }
 
 .project-content-detail {
-  color: #4a4a4a; /* 더 높은 대비를 위해 색상 조정 */
+  color: var(--text-color-secondary); /* 더 높은 대비를 위해 색상 조정 */
   font-size: 0.6rem;
   line-height: normal;
 }
@@ -275,7 +276,7 @@ body {
   line-height: normal;
 }
 .project-card-ex {
-  color: #4a4a4a; /* 더 높은 대비를 위해 색상 조정 */
+  color: var(--text-color-secondary); /* 더 높은 대비를 위해 색상 조정 */
   font-family: var(--font-family-main);
   font-size: 0.8rem;
   line-height: normal;
@@ -407,5 +408,16 @@ textarea:focus {
 .project-content,
 .project-content-detail,
 .project-card-ex {
-  color: #4a4a4a; /* 더 높은 대비를 위해 색상 조정 */
+  color: var(--text-color-secondary); /* 더 높은 대비를 위해 색상 조정 */
+  font-size: 0.8rem;
+  line-height: normal;
+}
+
+.project-content {
+  font-size: 0.7rem;
+  line-height: 1.4rem;
+}
+
+.project-content-detail {
+  font-size: 0.6rem;
 }

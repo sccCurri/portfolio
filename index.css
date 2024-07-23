@@ -475,7 +475,6 @@ body {
   top: 7.4rem;
   left: 3.3rem;
 }
-
 .intro-quote {
   position: absolute;
   width: 3.1rem;
@@ -951,6 +950,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    color: #81898f;
     top: 0;
     left: 0;
   }
