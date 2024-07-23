@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
+  setupSkillBars(); // Call setupSkillBars after setting language
+  setLanguage();
+  updateCards();
+});
+function setLanguage() {
+  const lang = getUrlParameter("lang") || "ko";
+  if (lang === "en") {
+    window.location.href = "index_en.html" + window.location.search;
+  }
+}
+function setupSkillBars() {
   const skillBars = document.querySelectorAll(".skill-bar");
   skillBars.forEach((bar) => {
     const progress = bar.getAttribute("data-progress");
@@ -15,31 +26,16 @@ document.addEventListener("DOMContentLoaded", function () {
     o1.style.left = `calc(100% - 14px)`;
     o2.style.left = `calc(100% - 11px)`;
   });
+}
 
-  // 언어 설정을 위한 함수
-  function setLanguage() {
-    const lang = getUrlParameter("lang") || "ko"; // 기본값은 한국어
-    if (lang === "en") {
-      window.location.href = "index_en.html" + window.location.search;
-    }
-  }
-
-  // URL 파라미터 가져오는 함수
-  function getUrlParameter(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-    var results = regex.exec(location.search);
-    return results === null
-      ? ""
-      : decodeURIComponent(results[1].replace(/\+/g, " "));
-  }
-
-  // 언어 설정 함수 호출
-  setLanguage();
-
-  // 초기 카드 설정
-  updateCards();
-});
+function getUrlParameter(name) {
+  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+  var results = regex.exec(location.search);
+  return results === null
+    ? ""
+    : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
 // Function to get URL parameters
 function getUrlParameter(name) {
   name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
