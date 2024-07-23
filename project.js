@@ -1,4 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
+  function setLanguage() {
+    const lang = getUrlParameter("lang") || "ko";
+    if (lang === "en") {
+      window.location.href = "project_en.html" + window.location.search;
+    }
+  }
+
+  function getUrlParameter(name) {
+    const url = window.location.href;
+    const param = url.match(new RegExp(`[?&]${name}=([^&]*)`));
+    return param && param[1];
+  }
+
+  setLanguage();
+
   if (document.getElementById("image1")) {
     updateImages();
   }
