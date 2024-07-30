@@ -32,6 +32,20 @@
   box-sizing: border-box;
 }
 
+.size-full {
+  width: 100%;
+  height: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 html,
 body {
   overflow-x: hidden;
@@ -72,15 +86,6 @@ body {
   position: sticky;
   top: 4.38rem;
   align-self: flex-start;
-}
-
-.intro-logo {
-  height: auto;
-  max-width: 45rem;
-  display: block;
-  margin: 0 auto;
-  object-fit: contain;
-  aspect-ratio: attr(width) / attr(height);
 }
 
 .side-bar-logo {
@@ -175,7 +180,7 @@ body {
   flex-grow: 1; /* 남은 공간 채우기 */
 }
 
-.strength-div {
+.strength-set {
   position: relative;
   width: 14.9375rem;
   height: 5.75rem;
@@ -215,7 +220,7 @@ body {
   background: rgba(34, 36, 37, 0.2);
 }
 
-.skill-wrap {
+.skill {
   position: relative;
   width: 15.0625rem;
   margin-top: 1.5rem; /* 상단 마진 조정 */
@@ -318,7 +323,7 @@ body {
   border-radius: 0.234375rem;
 }
 
-.license-div {
+.license {
   position: relative;
   width: 15.0625rem;
   margin-top: 2.5rem;
@@ -367,7 +372,7 @@ body {
   line-height: normal;
 }
 
-.education-div {
+.education {
   position: relative;
   width: 15.0625rem;
   margin-top: 2.5rem;
@@ -412,6 +417,36 @@ body {
   line-height: normal;
   margin-bottom: 1.25rem;
   text-align: left;
+}
+
+.intro-div {
+  width: 62.4375rem;
+  height: 29.4375rem;
+  border-radius: 0.939375rem;
+  overflow: hidden;
+  box-shadow: 0 0.250625rem 1.253125rem #00000033;
+  background: var(--highlight-color);
+  position: relative;
+}
+
+.exp-div {
+  position: relative;
+  width: 62.4rem;
+  margin: 3.1rem 0;
+}
+.proj-div {
+  position: relative;
+  width: 62.4rem;
+  margin: 3.1rem 0;
+}
+
+.intro-logo {
+  height: auto;
+  max-width: 45rem;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  aspect-ratio: attr(width) / attr(height);
 }
 
 .main-content {
@@ -618,17 +653,6 @@ body {
   margin-bottom: 0.5rem; /* 하단 여백 추가 */
 }
 
-#card1,
-#card3 {
-  transform: scale(0.75);
-  opacity: 0.3;
-}
-
-#card2 {
-  transform: scale(1);
-  opacity: 1;
-}
-
 .exp-prev,
 .exp-next {
   position: absolute;
@@ -782,6 +806,11 @@ body {
   word-break: break-word;
   margin-bottom: 1rem;
 }
+#card1,
+#card3 {
+  transform: scale(0.75);
+  opacity: 0.3;
+}
 
 .proj-div {
   position: relative;
@@ -905,20 +934,6 @@ body {
   left: var(--left, 0);
 }
 
-.size-full {
-  width: 100%;
-  height: 100%;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
@@ -959,11 +974,11 @@ body {
   .side-bar-profile,
   .name-tag,
   .info,
-  .strength-div,
+  .strength-set,
   .line,
-  .skill-wrap,
-  .license-div,
-  .education-div {
+  .skill,
+  .license,
+  .education {
     margin-left: auto;
     margin-right: auto;
   }
@@ -995,7 +1010,7 @@ body {
 
   .skill-title,
   .education-title,
-  .license-div {
+  .license {
     position: relative;
     display: flex;
     align-items: center;

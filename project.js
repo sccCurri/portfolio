@@ -1,8 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
   function setLanguage() {
     const lang = getUrlParameter("lang") || "ko";
-    if (lang === "en") {
-      window.location.href = "project_en.html" + window.location.search;
+    const mode = getUrlParameter("mode");
+    const currentPage = window.location.pathname.split("/").pop();
+    const isCorrectPage =
+      (lang === "en" && currentPage === "project_en.html") ||
+      (lang === "ko" && currentPage === "project.html");
+
+    if (!isCorrectPage) {
+      const targetPage = lang === "en" ? "project_en.html" : "project.html";
+      const queryString = [];
+      if (lang) queryString.push(`lang=${lang}`);
+      if (mode) queryString.push(`mode=${mode}`);
+      const queryPart =
+        queryString.length > 0 ? `?${queryString.join("&")}` : "";
+      window.location.href = targetPage + queryPart;
+      return;
     }
   }
 

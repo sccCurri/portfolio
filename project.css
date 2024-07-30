@@ -29,16 +29,16 @@ body {
   box-shadow: 0 0.3rem 1.3rem 0 rgba(0, 0, 0, 0.2);
   display: grid;
   grid-template-areas:
-    "top top top top"
-    "name name image ."
-    "icons tool image ."
-    "bottom bottom bottom bottom";
+    "top top top"
+    "name name image"
+    "icons tool image"
+    "bottom bottom bottom";
   grid-template-rows: 3.1rem 15.1rem 8.3rem 3.1rem;
-  grid-template-columns: 15.6rem 15.6rem 1fr 3.1rem;
+  grid-template-columns: 15.6rem 15.6rem 1fr;
   overflow: hidden;
 }
 
-.project-card>* {
+.project-card > * {
   background-color: var(--main-bg-color);
   border-right: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -85,9 +85,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.6rem;
   padding-left: 1.5rem;
   border-bottom: none;
+  gap: 0.6rem;
 }
 
 .project-row,
@@ -95,7 +95,6 @@ body {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  margin-bottom: 0.6rem;
 }
 
 .project-github-link a {
@@ -228,7 +227,7 @@ body {
   overflow: hidden;
 }
 
-.detail-card>* {
+.detail-card > * {
   border-right: 1px solid #000;
   border-bottom: 1px solid #000;
 }
@@ -317,7 +316,6 @@ body {
 }
 
 @media (max-width: 64rem) {
-
   /* 태블릿 대응 추가 */
   .project-card {
     margin: 3rem;
@@ -353,6 +351,13 @@ body {
 
   .project-card-name {
     grid-area: name;
+    padding: 1rem; /* 전체적인 패딩 추가 */
+  }
+
+  .project-content {
+    padding: 0 1rem; /* 좌우 여백 추가 */
+    font-size: 0.9rem; /* 글자 크기 조정 */
+    line-height: 1.5; /* 줄 간격 조정 */
   }
 
   .project-card-icons {

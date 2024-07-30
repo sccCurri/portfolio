@@ -7,18 +7,19 @@ document.addEventListener("DOMContentLoaded", function () {
 function setLanguageAndMode() {
   const lang = getUrlParameter("lang") || "ko";
   const mode = getUrlParameter("mode");
-
-  // 현재 페이지가 이미 올바른 언어 버전인지 확인
   const currentPage = window.location.pathname.split("/").pop();
   const isCorrectPage =
     (lang === "en" && currentPage === "index_en.html") ||
     (lang === "ko" && currentPage === "index.html");
 
-  // 언어 설정이 필요한 경우에만 리디렉션
   if (!isCorrectPage) {
     const targetPage = lang === "en" ? "index_en.html" : "index.html";
-    window.location.href = targetPage + getUpdatedQueryString(lang, mode);
-    return; // 리디렉션 후 함수 종료
+    const queryString = [];
+    if (lang) queryString.push(`lang=${lang}`);
+    if (mode) queryString.push(`mode=${mode}`);
+    const queryPart = queryString.length > 0 ? `?${queryString.join("&")}` : "";
+    window.location.href = targetPage + queryPart;
+    return;
   }
 
   // 모드 설정 (기존 코드 유지)
