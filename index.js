@@ -90,43 +90,80 @@ function setupSkillBars() {
 
 const cards = [
   {
-    period: "00년 00개월",
-    company: "회사/기업명 1",
-    term: "YYYY.MM~YYYY.MM",
-    team: "소속팀, 직무/직함 1",
-    task: "주요 업무 1",
-    taskTerm: "YYYY.MM~YYYY.MM",
-    project: "주요 프로젝트 1",
-    projectDetail: "프로젝트 소개 및 TASK 1",
+    ko: {
+      period: "00년 00개월",
+      company: "회사/기업명 1",
+      term: "YYYY.MM~YYYY.MM",
+      team: "소속팀, 직무/직함 1",
+      task: "주요 업무 1",
+      taskTerm: "YYYY.MM~YYYY.MM",
+      project: "주요 프로젝트 1",
+      projectDetail: "프로젝트 소개 및 TASK 1",
+    },
+    en: {
+      period: "00 years 00 months",
+      company: "Company/Organization Name 1",
+      term: "YYYY.MM~YYYY.MM",
+      team: "Team, Position/Title 1",
+      task: "Main Task 1",
+      taskTerm: "YYYY.MM~YYYY.MM",
+      project: "Main Project 1",
+      projectDetail: "Project Introduction and TASK 1",
+    },
   },
   {
-    period: "00년 00개월",
-    company: "회사/기업명 2",
-    term: "YYYY.MM~YYYY.MM",
-    team: "소속팀, 직무/직함 2",
-    task: "주요 업무 2",
-    taskTerm: "YYYY.MM~YYYY.MM",
-    project: "주요 프로젝트 2",
-    projectDetail: "프로젝트 소개 및 TASK 2",
+    ko: {
+      period: "00년 00개월",
+      company: "회사/기업명 2",
+      term: "YYYY.MM~YYYY.MM",
+      team: "소속팀, 직무/직함 2",
+      task: "주요 업무 2",
+      taskTerm: "YYYY.MM~YYYY.MM",
+      project: "주요 프로젝트 2",
+      projectDetail: "프로젝트 소개 및 TASK 2",
+    },
+    en: {
+      period: "00 years 00 months",
+      company: "Company/Organization Name 2",
+      term: "YYYY.MM~YYYY.MM",
+      team: "Team, Position/Title 2",
+      task: "Main Task 2",
+      taskTerm: "YYYY.MM~YYYY.MM",
+      project: "Main Project 2",
+      projectDetail: "Project Introduction and TASK 2",
+    },
   },
   {
-    period: "00년 00개월",
-    company: "회사/기업명 3",
-    term: "YYYY.MM~YYYY.MM",
-    team: "소속팀, 직무/직함 3",
-    task: "주요 업무 3",
-    taskTerm: "YYYY.MM~YYYY.MM",
-    project: "주요 프로젝트 3",
-    projectDetail: "프로젝트 소개 및 TASK 3",
+    ko: {
+      period: "00년 00개월",
+      company: "회사/기업명 3",
+      term: "YYYY.MM~YYYY.MM",
+      team: "소속팀, 직무/직함 3",
+      task: "주요 업무 3",
+      taskTerm: "YYYY.MM~YYYY.MM",
+      project: "주요 프로젝트 3",
+      projectDetail: "프로젝트 소개 및 TASK 3",
+    },
+    en: {
+      period: "00 years 00 months",
+      company: "Company/Organization Name 3",
+      term: "YYYY.MM~YYYY.MM",
+      team: "Team, Position/Title 3",
+      task: "Main Task 3",
+      taskTerm: "YYYY.MM~YYYY.MM",
+      project: "Main Project 3",
+      projectDetail: "Project Introduction and TASK 3",
+    },
   },
 ];
 
 let currentIndex = 0;
 
 function updateCards() {
+  const lang = getUrlParameter("lang") || "ko";
   for (let i = 0; i < 3; i++) {
     const cardIndex = (currentIndex + i) % 3;
-    const card = cards[cardIndex];
+    const card = cards[cardIndex][lang];
     const cardElement = document.getElementById(`card${i + 1}`);
 
     cardElement.querySelector(".exp-card-period").textContent = card.period;
