@@ -136,8 +136,7 @@ function updateCards() {
     cardElement.querySelector(".exp-card-task-text").textContent = card.task;
     cardElement.querySelector(".exp-card-task-term").textContent =
       card.taskTerm;
-    cardElement.querySelector(".exp-card-project-name").textContent =
-      card.project;
+    cardElement.querySelector(".exp-card-proj-name").textContent = card.project;
     cardElement.querySelector(".exp-card-task-detail-text").textContent =
       card.projectDetail;
 
