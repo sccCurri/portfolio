@@ -4,15 +4,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const mode = getUrlParameter("mode");
     const currentPage = window.location.pathname.split("/").pop();
     const isCorrectPage =
-      (lang === "en" && currentPage === "project_en.html") ||
+      (lang === "en" &&
+        (currentPage === "project_en.html" ||
+          currentPage === "project2_en.html")) ||
       (lang === "ko" &&
         (currentPage === "project.html" || currentPage === "project2.html"));
 
     if (!isCorrectPage) {
       const targetPage =
         lang === "en"
-          ? "project_en.html"
-          : currentPage === "project2.html"
+          ? currentPage === "project2.html" ||
+            currentPage === "project2_en.html"
+            ? "project2_en.html"
+            : "project_en.html"
+          : currentPage === "project2.html" ||
+            currentPage === "project2_en.html"
           ? "project2.html"
           : "project.html";
       const queryString = [];
@@ -44,26 +50,35 @@ const projectImages = {
   project2: ["p2.png", "p2-detail1.png", "p2-detail2.png"],
 };
 
-function updateImages() {
-  const currentPage = window.location.pathname.split("/").pop();
-  const images =
-    currentPage === "project2.html"
-      ? projectImages.project2
-      : projectImages.project1;
+function updateImages(isAnimating) {
+  const images = document.querySelectorAll(".project-picture");
 
-  for (let i = 0; i < 3; i++) {
-    const imageIndex = (currentImageIndex + i) % 3;
-    const imageElement = document.getElementById(`image${i + 1}`);
-    const imgElement = imageElement.querySelector("img");
+  images.forEach((image, index) => {
+    const position = (index - currentImageIndex + 3) % 3;
 
-    imgElement.src = `image/${images[imageIndex]}`;
-
-    if (i === 1) {
-      imageElement.className = "project-picture center";
+    if (position === 0) {
+      image.className = `project-picture center ${
+        isAnimating ? "animating" : ""
+      }`;
+      image.style.left = "50%";
+      image.style.transform = "translate(-50%, 0) scale(1)";
+    } else if (position === 1) {
+      image.className = `project-picture side right ${
+        isAnimating ? "animating" : ""
+      }`;
+      image.style.left = "75%";
+      image.style.transform = "translate(-50%, 0) scale(0.75)";
     } else {
-      imageElement.className = "project-picture side";
+      image.className = `project-picture side ${
+        isAnimating ? "animating" : ""
+      }`;
+      image.style.left = "25%";
+      image.style.transform = "translate(-50%, 0) scale(0.75)";
     }
-  }
+
+    image.style.opacity = position === 0 ? "1" : "0.3";
+    image.style.zIndex = position === 0 ? "2" : "1";
+  });
 }
 
 function moveImages(direction) {
@@ -71,16 +86,14 @@ function moveImages(direction) {
   wrapper.style.transition = "transform 0.5s ease-in-out";
 
   if (direction === "next") {
-    wrapper.style.transform = "translateX(-33.33%)";
     currentImageIndex = (currentImageIndex + 1) % 3;
   } else if (direction === "prev") {
-    wrapper.style.transform = "translateX(33.33%)";
     currentImageIndex = (currentImageIndex - 1 + 3) % 3;
   }
 
+  updateImages(true);
+
   setTimeout(() => {
-    wrapper.style.transition = "none";
-    wrapper.style.transform = "translateX(0)";
-    updateImages();
+    updateImages(false);
   }, 500);
 }

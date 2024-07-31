@@ -829,6 +829,8 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease;
   margin-bottom: 1.6rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .proj:hover {
@@ -837,8 +839,7 @@ body {
 
 .proj-main-img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 2;
+  height: 200px;
   object-fit: cover;
   background-color: var(--main-organization-color);
   border-radius: 0.9rem 0.9rem 0 0;
@@ -850,28 +851,27 @@ body {
   border-radius: 0 0 0.9rem 0.9rem;
   border: 0.1rem solid var(--main-organization-color);
   padding: 1.3rem 1.6rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .proj-content-title {
   color: var(--main-font-color);
   font-size: 1.1rem;
   margin-bottom: 0.6rem;
-  word-break: break-word; /* 긴 프로젝트명의 경우 줄바꿈 */
+  word-break: break-word;
 }
 
 .proj-content-text {
   color: var(--secondary-font-color);
-  font-size: 0.7rem;
-  line-height: 1.2rem;
-  letter-spacing: 0;
-  word-break: break-word;
-  overflow-y: auto;
-  max-height: 4.8rem; /* This is 4 lines of text (1.2rem * 4) */
-  transition: max-height 0.3s ease;
-}
-
-.proj:hover .proj-content-text {
-  max-height: none; /* Remove max-height on hover to show full content */
+  font-size: 0.8rem;
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  flex-grow: 1;
 }
 
 @media (max-width: 64rem) {

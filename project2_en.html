@@ -22,13 +22,12 @@
   <div class="background">
     <div class="project-card">
       <div class="project-card-name">
-        <div class="project-title">GlobalConnect</div>
+        <div class="project-title">CodeCollaborate</div>
         <div class="project-content">
-          GlobalConnect is a community platform for international students, providing various features to help them share information and network. This project was developed based on React and Node.js, with main features including bulletin boards, real-time chat, and event management. We used MongoDB for data management and implemented real-time communication through Socket.io. Additionally, we support stable hosting and deployment using AWS. GlobalConnect aims to make the lives of international students more convenient and enriching, and was completed through teamwork and technical challenges.
-        </div>
+          CodeCollaborate is a collaboration platform for developers, designed to support project management and teamwork. It was developed using React and Node.js, with key features including code review, real-time chat, and issue tracking. Data is managed through MongoDB, and real-time communication is implemented using Socket.io. AWS is used for stable hosting and deployment. CodeCollaborate helps developers worldwide collaborate seamlessly and successfully complete projects. This project was completed through efficient collaboration and technical challenges.</div>
       </div>
       <div class="project-card-image">
-        <img src="image/p1.png" class="project-image" />
+        <img src="image/p2.png" class="project-image" />
       </div>
       <div class="project-card-icons">
         <div class="project-row">
@@ -72,13 +71,13 @@
       <img class="project-prev" src="image/prev.svg" onclick="moveImages('prev')" />
       <div class="project-picture-wrapper">
         <div class="project-picture side" id="image1">
-          <img src="image/p1.png" class="project-div-image" />
+          <img src="image/p2.png" class="project-div-image" />
         </div>
         <div class="project-picture center" id="image2">
-          <img src="image/p1-detail1.png" class="project-div-image" />
+          <img src="image/p2-detail1.png" class="project-div-image" />
         </div>
         <div class="project-picture side" id="image3">
-          <img src="image/p1-detail2.png" class="project-div-image" />
+          <img src="image/p2-detail2.png" class="project-div-image" />
         </div>
       </div>
       <img class="project-next" src="image/next.svg" onclick="moveImages('next')" />
@@ -127,7 +126,7 @@
           </div>
           <div class="project-row">
             <img src="image/point.svg" class="project-tool-point" />
-            <div class="project-card-detail">Socket.io Client: Implemented socket connection and event handling for real-time message sending and receiving.</div>
+            <div class="project-card-detail">Socket.io Client: Socket connection and event handling for real-time message sending and receiving.</div>
           </div>
           <div class="project-row">
             <img src="image/point.svg" class="project-tool-point" />
@@ -161,13 +160,13 @@
           <img src="image/point.svg" class="project-tool-point" />
           <div class="project-card-detail">Problem Identification</div>
         </div>
-        <div class="project-card-ex">After introducing the real-time chat feature, as the number of users increased, we encountered issues with delayed chat messages and frequent connection drops. This significantly degraded the user experience.</div>
+        <div class="project-card-ex">After introducing the real-time chat feature, as the number of users increased, issues such as delayed chat messages and frequent disconnections occurred. This significantly impaired the user experience.</div>
 
         <div class="project-row">
           <img src="image/point.svg" class="project-tool-point" />
           <div class="project-card-detail">Problem Solution</div>
         </div>
-        <div class="project-card-ex">We analyzed server logs and network traffic to identify the causes of Socket.io connection drops and message delays. We then scaled the Socket.io servers, used a load balancer to distribute the load, and periodically cleaned up unnecessary data and connections to prevent memory leaks.</div>
+        <div class="project-card-ex">By analyzing server logs and network traffic, we identified the causes of Socket.io connection drops and message delays. We expanded the Socket.io servers to multiple instances, used a load balancer to distribute the load, and periodically cleaned up unnecessary data and connections to prevent memory leaks.</div>
 
       </div>
     </div>

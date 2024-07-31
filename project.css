@@ -174,38 +174,47 @@ body {
   position: relative;
   margin: 3.1rem;
   overflow: hidden;
+  height: 25rem;
 }
 
 .project-picture-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300%;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .project-picture {
-  position: relative;
-  transition: all 0.3s ease;
-  width: 33.33%;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  width: 34rem;
+  height: 19.1rem;
 }
 
 .project-picture.side {
-  transform: scale(0.75);
+  transform: scale(0.75) translateX(-50%);
   z-index: 1;
   opacity: 0.3;
 }
 
+.project-picture.side.right {
+  transform: scale(0.75) translateX(50%);
+}
+
 .project-picture.center {
   z-index: 2;
-  transform: scale(1);
+  transform: scale(1) translateX(0);
   opacity: 1;
 }
 
 .project-div-image {
-  width: 34rem;
-  height: 19.1rem;
+  width: 100%;
+  height: 100%;
   display: block;
   border-radius: 0.9rem;
+  object-fit: cover;
 }
 
 .project-prev,
