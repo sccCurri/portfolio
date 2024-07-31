@@ -594,6 +594,7 @@ body {
   transition: transform 0.5s ease-in-out;
   display: flex;
   align-items: stretch;
+  gap: 1rem;
 }
 
 .exp-card {
@@ -602,7 +603,6 @@ body {
   border-radius: 1rem;
   background: var(--sub-organization-color);
   padding: 0.8rem;
-  transition: transform 0.5s ease-in-out;
   min-width: 33.33%;
   display: flex;
   flex-direction: column;
@@ -651,23 +651,6 @@ body {
   font-size: 0.6rem;
   line-height: 1.2;
   margin-bottom: 0.5rem; /* 하단 여백 추가 */
-}
-
-.exp-prev,
-.exp-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  cursor: pointer;
-}
-
-.exp-prev {
-  left: 0.6rem;
-}
-
-.exp-next {
-  right: 0.6rem;
 }
 
 .exp-card-period-wrapper {
@@ -805,11 +788,6 @@ body {
   letter-spacing: 0;
   word-break: break-word;
   margin-bottom: 1rem;
-}
-#card1,
-#card3 {
-  transform: scale(0.75);
-  opacity: 0.3;
 }
 
 .proj-div {
@@ -1017,7 +995,7 @@ body {
     position: absolute;
     left: 0;
     margin-right: 10px;
-    /* display: none; 이 줄을 제거하거나 주석 처리 */
+    /* display: none; 이 을 제거하거나 주석 처리 */
   }
 
   .skill-title,
@@ -1091,6 +1069,8 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0;
+    transition: transform 0.5s ease-in-out;
+    gap: 1rem;
   }
 
   .exp-card {
@@ -1106,6 +1086,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    transition: all 0.5s ease-in-out;
+    flex: 0 0 100%;
   }
 
   .exp-card-period-wrapper {
