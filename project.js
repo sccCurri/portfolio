@@ -39,9 +39,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 let currentImageIndex = 0;
-const images = ["p1.png", "p2.png", "p3.png"];
+const projectImages = {
+  project1: ["p1.png", "p1-detail1.png", "p1-detail2.png"],
+  project2: ["p2.png", "p2-detail1.png", "p2-detail2.png"],
+};
 
 function updateImages() {
+  const currentPage = window.location.pathname.split("/").pop();
+  const images =
+    currentPage === "project2.html"
+      ? projectImages.project2
+      : projectImages.project1;
+
   for (let i = 0; i < 3; i++) {
     const imageIndex = (currentImageIndex + i) % 3;
     const imageElement = document.getElementById(`image${i + 1}`);
