@@ -161,49 +161,47 @@ let currentIndex = 0;
 
 function updateCards() {
   const lang = getUrlParameter("lang") || "ko";
-  const cardElements = document.querySelectorAll(".exp-card");
+  for (let i = 0; i < 3; i++) {
+    const cardIndex = (currentIndex + i) % 3;
+    const card = cards[cardIndex][lang];
+    const cardElement = document.getElementById(`card${i + 1}`);
 
-  cardElements.forEach((card, index) => {
-    const cardIndex = (currentIndex + index) % 3;
-    const cardData = cards[cardIndex][lang];
+    cardElement.querySelector(".exp-card-period").textContent = card.period;
+    cardElement.querySelector(".exp-card-company").textContent = card.company;
+    cardElement.querySelector(".exp-card-term").textContent = card.term;
+    cardElement.querySelector(".exp-card-team-name").textContent = card.team;
+    cardElement.querySelector(".exp-card-task-text").textContent = card.task;
+    cardElement.querySelector(".exp-card-task-term").textContent =
+      card.taskTerm;
+    cardElement.querySelector(".exp-card-proj-name").textContent = card.project;
+    cardElement.querySelector(".exp-card-task-detail-text").textContent =
+      card.projectDetail;
 
-    card.querySelector(".exp-card-period").textContent = cardData.period;
-    card.querySelector(".exp-card-company").textContent = cardData.company;
-    card.querySelector(".exp-card-term").textContent = cardData.term;
-    card.querySelector(".exp-card-team-name").textContent = cardData.team;
-    card.querySelector(".exp-card-task-text").textContent = cardData.task;
-    card.querySelector(".exp-card-task-term").textContent = cardData.taskTerm;
-    card.querySelector(".exp-card-proj-name").textContent = cardData.project;
-    card.querySelector(".exp-card-task-detail-text").textContent =
-      cardData.projectDetail;
-
-    card.style.transition = "all 0.5s ease";
-    if (index === 1) {
-      card.style.transform = "scale(1)";
-      card.style.opacity = "1";
-      card.style.zIndex = "2";
+    if (i === 1) {
+      cardElement.style.transform = "scale(1)";
+      cardElement.style.opacity = "1";
     } else {
-      card.style.transform = "scale(0.75)";
-      card.style.opacity = "0.3";
-      card.style.zIndex = "1";
+      cardElement.style.transform = "scale(0.75)";
+      cardElement.style.opacity = "0.3";
     }
-  });
+  }
 }
 
 function moveCards(direction) {
-  const cardElements = document.querySelectorAll(".exp-card");
-
-  cardElements.forEach((card) => {
-    card.style.transition = "none";
-  });
+  const frame = document.querySelector(".exp-card-frame");
+  frame.style.transition = "transform 0.5s ease-in-out";
 
   if (direction === "next") {
     currentIndex = (currentIndex + 1) % 3;
+    frame.style.transform = "translateX(-33.33%)";
   } else if (direction === "prev") {
     currentIndex = (currentIndex - 1 + 3) % 3;
+    frame.style.transform = "translateX(33.33%)";
   }
 
   setTimeout(() => {
+    frame.style.transition = "none";
+    frame.style.transform = "translateX(0)";
     updateCards();
-  }, 50);
+  }, 500);
 }
