@@ -5,10 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const currentPage = window.location.pathname.split("/").pop();
     const isCorrectPage =
       (lang === "en" && currentPage === "project_en.html") ||
-      (lang === "ko" && currentPage === "project.html");
+      (lang === "ko" &&
+        (currentPage === "project.html" || currentPage === "project2.html"));
 
     if (!isCorrectPage) {
-      const targetPage = lang === "en" ? "project_en.html" : "project.html";
+      const targetPage =
+        lang === "en"
+          ? "project_en.html"
+          : currentPage === "project2.html"
+          ? "project2.html"
+          : "project.html";
       const queryString = [];
       if (lang) queryString.push(`lang=${lang}`);
       if (mode) queryString.push(`mode=${mode}`);
