@@ -29,6 +29,7 @@
 }
 * {
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
 }
 
@@ -419,16 +420,6 @@ body {
   text-align: left;
 }
 
-.intro-div {
-  width: 62.4375rem;
-  height: 29.4375rem;
-  border-radius: 0.939375rem;
-  overflow: hidden;
-  box-shadow: 0 0.250625rem 1.253125rem #00000033;
-  background: var(--highlight-color);
-  position: relative;
-}
-
 .exp-div {
   position: relative;
   width: 62.4rem;
@@ -520,7 +511,7 @@ body {
 .intro-quote {
   width: 3.1rem;
   height: 2.6rem;
-  margin-bottom: 0.9rem;
+  margin-bottom: 1.25rem;
 }
 
 .intro-text {
@@ -918,12 +909,6 @@ body {
   }
 }
 
-.absolute-position {
-  position: absolute;
-  top: var(--top, 0);
-  left: var(--left, 0);
-}
-
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
@@ -1007,10 +992,22 @@ body {
     height: 20px; /* 아이콘과 텍스트의 높이에 맞게 조정 */
   }
 
-  .intro-div,
+  .intro-div {
+    width: 100%;
+    height: auto;
+    border-radius: 0.939375rem;
+    overflow: hidden;
+    box-shadow: 0 0.250625rem 1.253125rem #00000033;
+    background: var(--highlight-color);
+    position: relative;
+    margin: 20px auto; /* 추가: 모바일 화면에서 중앙 정렬 */
+    padding: 20px; /* 추가: 내부 여백 추가 */
+  }
+
   .intro-frame {
     text-align: center;
-    height: 12rem;
+    height: auto; /* 수정: 높이를 자동으로 조정 */
+    background: none; /* 수정: 배경 제거 */
   }
 
   .intro-logo,
@@ -1029,31 +1026,35 @@ body {
     color: #81898f;
     top: 0;
     left: 0;
+    padding: 20px; /* 추가: 내부 여백 추가 */
   }
 
   .intro-quote {
-    width: 30px;
-    margin: 20px;
+    width: 3.1rem;
+    height: 2.6rem;
+    margin: 1.25rem;
   }
 
   .intro-text {
     font-size: 16px;
     width: 100%;
     word-wrap: break-word;
+    text-align: center; /* 추가: 텍스트 중앙 정렬 */
   }
 
   .intro-text-detail {
-    font-size: 14px;
+    font-size: 10px;
     width: 100%;
     word-wrap: break-word;
     top: 7rem;
+    text-align: center; /* 추가: 텍스트 중앙 정렬 */
   }
 
   .exp-div {
     margin: 20px auto;
     padding: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* 수정: 세로 배치 */
     align-items: flex-start;
   }
 
@@ -1062,6 +1063,9 @@ body {
     width: 100%;
     height: auto;
     overflow: visible;
+    display: flex;
+    flex-direction: column; /* 수정: 세로 배치 */
+    align-items: center;
   }
 
   .exp-card-frame {
@@ -1070,16 +1074,16 @@ body {
     align-items: center;
     padding: 0;
     transition: transform 0.5s ease-in-out;
-    gap: 1rem;
+    flex-direction: column; /* 수정: 세로 배치 */
   }
 
   .exp-card {
     width: 100%;
     height: auto;
     min-height: 300px;
-    margin: 20px 0;
     transform: scale(1);
     opacity: 1;
+    margin: 0;
     padding: 20px;
     box-sizing: border-box;
     text-align: left;
@@ -1200,8 +1204,26 @@ body {
   .info-detail-exp {
     text-align: left;
   }
-}
 
+  .project-picture.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .project-div-image {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.9rem;
+  }
+}
+.proj-title {
+  margin: 2rem 0;
+}
 .language-switch {
   margin-top: 1rem;
   padding: 0 1.25rem;

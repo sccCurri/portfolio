@@ -48,6 +48,7 @@ const projectImages = {
 
 function updateImages(isAnimating) {
   const images = document.querySelectorAll(".project-picture");
+  const isMobile = window.innerWidth <= 768;
 
   images.forEach((image, index) => {
     const position = (index - currentImageIndex + 3) % 3;
@@ -56,20 +57,24 @@ function updateImages(isAnimating) {
       image.className = `project-picture center ${
         isAnimating ? "animating" : ""
       }`;
-      image.style.left = "50%";
-      image.style.transform = "translate(-50%, 0) scale(1)";
+      image.style.left = isMobile ? "0" : "50%";
+      image.style.transform = isMobile ? "none" : "translate(-50%, 0) scale(1)";
     } else if (position === 1) {
       image.className = `project-picture side right ${
         isAnimating ? "animating" : ""
       }`;
-      image.style.left = "75%";
-      image.style.transform = "translate(-50%, 0) scale(0.75)";
+      image.style.left = isMobile ? "0" : "75%";
+      image.style.transform = isMobile
+        ? "none"
+        : "translate(-50%, 0) scale(0.75)";
     } else {
       image.className = `project-picture side ${
         isAnimating ? "animating" : ""
       }`;
-      image.style.left = "25%";
-      image.style.transform = "translate(-50%, 0) scale(0.75)";
+      image.style.left = isMobile ? "0" : "25%";
+      image.style.transform = isMobile
+        ? "none"
+        : "translate(-50%, 0) scale(0.75)";
     }
 
     image.style.opacity = position === 0 ? "1" : "0.3";
@@ -78,8 +83,12 @@ function updateImages(isAnimating) {
 }
 
 function moveImages(direction) {
-  const wrapper = document.querySelector(".project-picture-wrapper");
-  wrapper.style.transition = "transform 0.5s ease-in-out";
+  const isMobile = window.innerWidth <= 768;
+
+  if (!isMobile) {
+    const wrapper = document.querySelector(".project-picture-wrapper");
+    wrapper.style.transition = "transform 0.5s ease-in-out";
+  }
 
   if (direction === "next") {
     currentImageIndex = (currentImageIndex + 1) % 3;
