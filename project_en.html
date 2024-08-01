@@ -1,179 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://scccurri.github.io/portfolio/index.html"
+    />
+    <meta property="og:title" content="Jiwung Choi's Resume" />
+    <meta property="og:image" content="image/OGimage.png" />
+    <meta property="og:description" content="This is Jiwung Choi's resume." />
+    <meta property="og:site_name" content="SCC Portfolio" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://scccurri.github.io/portfolio/index.html" />
-  <meta property="og:title" content="Jiwung Choi's Resume" />
-  <meta property="og:image" content="image/OGimage.png" />
-  <meta property="og:description" content="This is Jiwung Choi's resume." />
-  <meta property="og:site_name" content="SCC Portfolio" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+    <title>Jiwung Choi's Resume</title>
+    <link rel="stylesheet" href="project.css" />
+  </head>
 
-  <title>Jiwung Choi's Resume</title>
-  <link rel="stylesheet" href="project.css" />
-</head>
-
-<body>
-  <div class="background">
-    <div class="project-card">
-      <div class="project-card-name">
-        <div class="project-title">GlobalConnect</div>
-        <div class="project-content">
-          GlobalConnect is a community platform for international students, providing various features to help them share information and network. This project was developed based on React and Node.js, with main features including bulletin boards, real-time chat, and event management. We used MongoDB for data management and implemented real-time communication through Socket.io. Additionally, we support stable hosting and deployment using AWS. GlobalConnect aims to make the lives of international students more convenient and enriching, and was completed through teamwork and technical challenges.
+  <body>
+    <div class="background">
+      <div class="project-card">
+        <div class="project-card-name">
+          <div class="project-title">GlobalConnect</div>
+          <div class="project-content">
+            GlobalConnect is a community platform for international students,
+            providing various features to help them share information and
+            network. This project was developed based on React and Node.js, with
+            main features including bulletin boards, real-time chat, and event
+            management. We used MongoDB for data management and implemented
+            real-time communication through Socket.io. Additionally, we support
+            stable hosting and deployment using AWS. GlobalConnect aims to make
+            the lives of international students more convenient and enriching,
+            and was completed through teamwork and technical challenges.
+          </div>
+        </div>
+        <div class="project-card-image">
+          <img src="image/p1.png" class="project-image" />
+        </div>
+        <div class="project-card-icons">
+          <div class="project-row">
+            <img src="image/period.svg" class="project-icon" />
+            <div class="project-content-detail">23.06~23.12 / 6 months</div>
+          </div>
+          <div class="project-row">
+            <img src="image/people.svg" class="project-icon" />
+            <div class="project-content-detail">5 people</div>
+          </div>
+          <div class="project-row">
+            <img src="image/role.svg" class="project-icon" />
+            <div class="project-content-detail">
+              2 Frontend / 2 Backend / 1 Designer
+            </div>
+          </div>
+          <div class="project-github-link">
+            <img src="image/github.svg" class="project-icon" />
+            <a
+              href="https://github.com/username/repository"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub Repository</a
+            >
+          </div>
+        </div>
+        <div class="project-card-tool">
+          <div class="project-row">
+            <img src="image/point.svg" class="project-tool-point" />
+            <div class="project-tool-detail">
+              React, Redux, HTML5, CSS3, JavaScript
+            </div>
+          </div>
+          <div class="project-row">
+            <img src="image/point.svg" class="project-tool-point" />
+            <div class="project-tool-detail">Node.js, Express.js</div>
+          </div>
+          <div class="project-row">
+            <img src="image/point.svg" class="project-tool-point" />
+            <div class="project-tool-detail">MongoDB</div>
+          </div>
+          <div class="project-row">
+            <img src="image/point.svg" class="project-tool-point" />
+            <div class="project-tool-detail">Socket.io</div>
+          </div>
         </div>
       </div>
-      <div class="project-card-image">
-        <img src="image/p1.png" class="project-image" />
+      <div class="project-pictures">
+        <img
+          class="project-prev"
+          src="image/prev.svg"
+          onclick="moveImages('prev')"
+        />
+        <div class="project-picture-wrapper">
+          <div class="project-picture side" id="image1">
+            <img src="image/p1.png" class="project-div-image" />
+          </div>
+          <div class="project-picture center" id="image2">
+            <img src="image/p1-detail1.png" class="project-div-image" />
+          </div>
+          <div class="project-picture side" id="image3">
+            <img src="image/p1-detail2.png" class="project-div-image" />
+          </div>
+        </div>
+        <img
+          class="project-next"
+          src="image/next.svg"
+          onclick="moveImages('next')"
+        />
       </div>
-      <div class="project-card-icons">
-        <div class="project-row">
-          <img src="image/period.svg" class="project-icon" />
-          <div class="project-content-detail">23.06~23.12 / 6 months</div>
+      <div class="detail-card">
+        <div class="detail-card-a"></div>
+        <div class="detail-card-b"></div>
+        <div class="detail-card-c"></div>
+        <div class="detail-card-d"></div>
+        <div class="detail-card-e"></div>
+        <div class="detail-card-list">
+          <div class="detail-card-wrapper">
+            <div class="detail-card-title">Bulletin Board Feature</div>
+            <div class="project-row">
+              <img src="image/point.svg" class="project-tool-point" />
+              <div class="project-card-detail">
+                Bulletin board feature allowing users to write posts and
+                comments on various topics
+              </div>
+            </div>
+            <div class="project-row">
+              <img src="image/point.svg" class="project-tool-point" />
+              <div class="project-card-detail">
+                React: Designed UI components for users to write and view posts.
+              </div>
+            </div>
+            <div class="project-row">
+              <img src="image/point.svg" class="project-tool-point" />
+              <div class="project-card-detail">
+                Redux: Managed the state of post lists and comments.
+              </div>
+            </div>
+            <div class="project-row">
+              <img src="image/point.svg" class="project-tool-point" />
+              <div class="project-card-detail">
+                Axios: Implemented post creation, editing, deletion, and
+                commenting features by communicating with the backend API.
+              </div>
+            </div>
+            <div class="project-row">
+              <img src="image/point.svg" class="project-tool-point" />
+              <div class="project-card-detail">
+                Node.js & Express.js: Built a RESTful API server to provide
+                endpoints for post creation, editing, deletion, and comment
+                management.
+              </div>
+            </div>
+            <div class="project-row">
+              <img src="image/point.svg" class="project-tool-point" />
+              <div class="project-card-detail">
+                MongoDB: Designed schemas and integrated database for storing
+                post and comment data.
+              </div>
+            </div>
+            <div class="project-row">
+              <img src="image/point.svg" class="project-tool-point" />
+              <div class="project-card-detail">
+                JWT Authentication: Managed user authentication for post
+                creation and editing permissions.
+              </div>
+            </div>
+            <div class="detail-card-title">Real-time Chat Feature</div>
+            <div class="project-row">
+              <img src="image/point.svg" class="project-tool-point" />
+              <div class="project-card-detail">
+                React: Designed chat interface and implemented components for
+                real-time message updates.
+              </div>
+            </div>
+            <div class="project-row">
+              <img src="image/point.svg" class="project-tool-point" />
+              <div class="project-card-detail">
+                Socket.io Client: Implemented socket connection and event
+                handling for real-time message sending and receiving.
+              </div>
+            </div>
+            <div class="project-row">
+              <img src="image/point.svg" class="project-tool-point" />
+              <div class="project-card-detail">
+                Node.js & Express.js: Built a chat server and configured
+                Socket.io server to support real-time communication.
+              </div>
+            </div>
+            <div class="project-row">
+              <img src="image/point.svg" class="project-tool-point" />
+              <div class="project-card-detail">
+                MongoDB: Implemented features to store and retrieve chat
+                history.
+              </div>
+            </div>
+            <div class="project-row">
+              <img src="image/point.svg" class="project-tool-point" />
+              <div class="project-card-detail">
+                Socket.io: Handled socket events for real-time message sending
+                and receiving, and managed chat rooms.
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="project-row">
-          <img src="image/people.svg" class="project-icon" />
-          <div class="project-content-detail">5 people</div>
-        </div>
-        <div class="project-row">
-          <img src="image/role.svg" class="project-icon" />
-          <div class="project-content-detail">2 Frontend / 2 Backend / 1 Designer</div>
-        </div>
-        <div class="project-github-link">
-          <img src="image/github.svg" class="project-icon" />
-          <a href="https://github.com/username/repository" target="_blank" rel="noopener noreferrer">GitHub
-            Repository</a>
-        </div>
-      </div>
-      <div class="project-card-tool">
-        <div class="project-row">
-          <img src="image/point.svg" class="project-tool-point" />
-          <div class="project-tool-detail">React, Redux, HTML5, CSS3, JavaScript</div>
-        </div>
-        <div class="project-row">
-          <img src="image/point.svg" class="project-tool-point" />
-          <div class="project-tool-detail">Node.js, Express.js</div>
-        </div>
-        <div class="project-row">
-          <img src="image/point.svg" class="project-tool-point" />
-          <div class="project-tool-detail">MongoDB</div>
-        </div>
-        <div class="project-row">
-          <img src="image/point.svg" class="project-tool-point" />
-          <div class="project-tool-detail">Socket.io</div>
+        <div class="detail-card-ts">
+          <div class="detail-card-title">Database Performance Issue</div>
+          <div class="project-row">
+            <img src="image/point.svg" class="project-tool-point" />
+            <div class="project-card-detail">Problem Identification</div>
+          </div>
+          <div class="project-card-ex">
+            As the bulletin board feature became active, the number of posts and
+            comments increased rapidly, causing database performance
+            degradation. This led to longer loading times for posts and delayed
+            server response times.
+          </div>
+
+          <div class="project-row">
+            <img src="image/point.svg" class="project-tool-point" />
+            <div class="project-card-detail">Problem Solution</div>
+          </div>
+          <div class="project-card-ex">
+            We improved query speed by adding indexes to frequently accessed
+            fields (such as creation date and author). We also optimized queries
+            to minimize unnecessary data retrieval and modified them to
+            selectively fetch only the required data. Through this process, we
+            gained an understanding of the importance of database optimization
+            and performance tuning. Additionally, we learned index design and
+            sharding techniques for effective management of large-scale data.
+            This experience has equipped us with the ability to solve
+            database-related issues more quickly and efficiently in the future.
+          </div>
+          <div class="detail-card-title">Real-time Chat Stability Issue</div>
+          <div class="project-row">
+            <img src="image/point.svg" class="project-tool-point" />
+            <div class="project-card-detail">Problem Identification</div>
+          </div>
+          <div class="project-card-ex">
+            After introducing the real-time chat feature, as the number of users
+            increased, we encountered issues with delayed chat messages and
+            frequent connection drops. This significantly degraded the user
+            experience.
+          </div>
+
+          <div class="project-row">
+            <img src="image/point.svg" class="project-tool-point" />
+            <div class="project-card-detail">Problem Solution</div>
+          </div>
+          <div class="project-card-ex">
+            We analyzed server logs and network traffic to identify the causes
+            of Socket.io connection drops and message delays. We then scaled the
+            Socket.io servers, used a load balancer to distribute the load, and
+            periodically cleaned up unnecessary data and connections to prevent
+            memory leaks.
+          </div>
         </div>
       </div>
     </div>
-    <div class="project-pictures">
-      <img class="project-prev" src="image/prev.svg" onclick="moveImages('prev')" />
-      <div class="project-picture-wrapper">
-        <div class="project-picture side" id="image1">
-          <img src="image/p1.png" class="project-div-image" />
-        </div>
-        <div class="project-picture center" id="image2">
-          <img src="image/p1-detail1.png" class="project-div-image" />
-        </div>
-        <div class="project-picture side" id="image3">
-          <img src="image/p1-detail2.png" class="project-div-image" />
-        </div>
-      </div>
-      <img class="project-next" src="image/next.svg" onclick="moveImages('next')" />
-    </div>
-    <div class="detail-card">
-      <div class="detail-card-a"></div>
-      <div class="detail-card-b"></div>
-      <div class="detail-card-c"></div>
-      <div class="detail-card-d"></div>
-      <div class="detail-card-e"></div>
-      <div class="detail-card-list">
-        <div class="detail-card-wrapper">
-          <div class="detail-card-title">Bulletin Board Feature</div>
-          <div class="project-row">
-            <img src="image/point.svg" class="project-tool-point" />
-            <div class="project-card-detail">Bulletin board feature allowing users to write posts and comments on various topics</div>
-          </div>
-          <div class="project-row">
-            <img src="image/point.svg" class="project-tool-point" />
-            <div class="project-card-detail">React: Designed UI components for users to write and view posts.</div>
-          </div>
-          <div class="project-row">
-            <img src="image/point.svg" class="project-tool-point" />
-            <div class="project-card-detail">Redux: Managed the state of post lists and comments.</div>
-          </div>
-          <div class="project-row">
-            <img src="image/point.svg" class="project-tool-point" />
-            <div class="project-card-detail">Axios: Implemented post creation, editing, deletion, and commenting features by communicating with the backend API.</div>
-          </div>
-          <div class="project-row">
-            <img src="image/point.svg" class="project-tool-point" />
-            <div class="project-card-detail">Node.js & Express.js: Built a RESTful API server to provide endpoints for post creation, editing, deletion, and comment management.</div>
-          </div>
-          <div class="project-row">
-            <img src="image/point.svg" class="project-tool-point" />
-            <div class="project-card-detail">MongoDB: Designed schemas and integrated database for storing post and comment data.</div>
-          </div>
-          <div class="project-row">
-            <img src="image/point.svg" class="project-tool-point" />
-            <div class="project-card-detail">JWT Authentication: Managed user authentication for post creation and editing permissions.</div>
-          </div>
-          <div class="detail-card-title">Real-time Chat Feature</div>
-          <div class="project-row">
-            <img src="image/point.svg" class="project-tool-point" />
-            <div class="project-card-detail">React: Designed chat interface and implemented components for real-time message updates.</div>
-          </div>
-          <div class="project-row">
-            <img src="image/point.svg" class="project-tool-point" />
-            <div class="project-card-detail">Socket.io Client: Implemented socket connection and event handling for real-time message sending and receiving.</div>
-          </div>
-          <div class="project-row">
-            <img src="image/point.svg" class="project-tool-point" />
-            <div class="project-card-detail">Node.js & Express.js: Built a chat server and configured Socket.io server to support real-time communication.</div>
-          </div>
-          <div class="project-row">
-            <img src="image/point.svg" class="project-tool-point" />
-            <div class="project-card-detail">MongoDB: Implemented features to store and retrieve chat history.</div>
-          </div>
-          <div class="project-row">
-            <img src="image/point.svg" class="project-tool-point" />
-            <div class="project-card-detail">Socket.io: Handled socket events for real-time message sending and receiving, and managed chat rooms.</div>
-          </div>
-        </div>
-      </div>
-      <div class="detail-card-ts">
-        <div class="detail-card-title">Database Performance Issue</div>
-        <div class="project-row">
-          <img src="image/point.svg" class="project-tool-point" />
-          <div class="project-card-detail">Problem Identification</div>
-        </div>
-        <div class="project-card-ex">As the bulletin board feature became active, the number of posts and comments increased rapidly, causing database performance degradation. This led to longer loading times for posts and delayed server response times.</div>
-
-        <div class="project-row">
-          <img src="image/point.svg" class="project-tool-point" />
-          <div class="project-card-detail">Problem Solution</div>
-        </div>
-        <div class="project-card-ex">We improved query speed by adding indexes to frequently accessed fields (such as creation date and author). We also optimized queries to minimize unnecessary data retrieval and modified them to selectively fetch only the required data. Through this process, we gained an understanding of the importance of database optimization and performance tuning. Additionally, we learned index design and sharding techniques for effective management of large-scale data. This experience has equipped us with the ability to solve database-related issues more quickly and efficiently in the future.</div>
-        <div class="detail-card-title">Real-time Chat Stability Issue</div>
-        <div class="project-row">
-          <img src="image/point.svg" class="project-tool-point" />
-          <div class="project-card-detail">Problem Identification</div>
-        </div>
-        <div class="project-card-ex">After introducing the real-time chat feature, as the number of users increased, we encountered issues with delayed chat messages and frequent connection drops. This significantly degraded the user experience.</div>
-
-        <div class="project-row">
-          <img src="image/point.svg" class="project-tool-point" />
-          <div class="project-card-detail">Problem Solution</div>
-        </div>
-        <div class="project-card-ex">We analyzed server logs and network traffic to identify the causes of Socket.io connection drops and message delays. We then scaled the Socket.io servers, used a load balancer to distribute the load, and periodically cleaned up unnecessary data and connections to prevent memory leaks.</div>
-
-      </div>
-    </div>
-  </div>
-  </div>
-  <script src="project.js"></script>
-</body>
-
+    <script src="project.js"></script>
+  </body>
 </html>

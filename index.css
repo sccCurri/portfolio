@@ -1201,3 +1201,32 @@ body {
     text-align: left;
   }
 }
+
+.language-switch {
+  margin-top: 1rem;
+  padding: 0 1.25rem;
+  display: flex;
+  justify-content: center;
+}
+
+.language-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  padding: 0.5rem 1rem;
+  background-color: var(--main-organization-color);
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.language-button:hover {
+  background-color: var(--sub-organization-color);
+}
+
+.language-button span {
+  font-size: 0.9rem;
+}

@@ -1,48 +1,44 @@
 document.addEventListener("DOMContentLoaded", function () {
-  function setLanguage() {
-    const lang = getUrlParameter("lang") || "ko";
-    const mode = getUrlParameter("mode");
-    const currentPage = window.location.pathname.split("/").pop();
-    const isCorrectPage =
-      (lang === "en" &&
-        (currentPage === "project_en.html" ||
-          currentPage === "project2_en.html")) ||
-      (lang === "ko" &&
-        (currentPage === "project.html" || currentPage === "project2.html"));
-
-    if (!isCorrectPage) {
-      const targetPage =
-        lang === "en"
-          ? currentPage === "project2.html" ||
-            currentPage === "project2_en.html"
-            ? "project2_en.html"
-            : "project_en.html"
-          : currentPage === "project2.html" ||
-            currentPage === "project2_en.html"
-          ? "project2.html"
-          : "project.html";
-      const queryString = [];
-      if (lang) queryString.push(`lang=${lang}`);
-      if (mode) queryString.push(`mode=${mode}`);
-      const queryPart =
-        queryString.length > 0 ? `?${queryString.join("&")}` : "";
-      window.location.href = targetPage + queryPart;
-      return;
-    }
-  }
-
-  function getUrlParameter(name) {
-    const url = window.location.href;
-    const param = url.match(new RegExp(`[?&]${name}=([^&]*)`));
-    return param && param[1];
-  }
-
   setLanguage();
 
   if (document.getElementById("image1")) {
     updateImages();
   }
 });
+
+function setLanguage() {
+  const lang = getUrlParameter("lang") || "ko";
+  const mode = getUrlParameter("mode");
+  const currentPage = window.location.pathname.split("/").pop();
+  const isCorrectPage =
+    (lang === "en" &&
+      (currentPage === "project_en.html" ||
+        currentPage === "project2_en.html")) ||
+    (lang === "ko" &&
+      (currentPage === "project.html" || currentPage === "project2.html"));
+
+  if (!isCorrectPage) {
+    const targetPage =
+      lang === "en"
+        ? currentPage === "project2.html" || currentPage === "project2_en.html"
+          ? "project2_en.html"
+          : "project_en.html"
+        : currentPage === "project2.html" || currentPage === "project2_en.html"
+        ? "project2.html"
+        : "project.html";
+    const queryString = [];
+    if (lang) queryString.push(`lang=${lang}`);
+    if (mode) queryString.push(`mode=${mode}`);
+    const queryPart = queryString.length > 0 ? `?${queryString.join("&")}` : "";
+    window.location.href = targetPage + queryPart;
+  }
+}
+
+function getUrlParameter(name) {
+  const url = window.location.href;
+  const param = url.match(new RegExp(`[?&]${name}=([^&]*)`));
+  return param && param[1];
+}
 
 let currentImageIndex = 0;
 const projectImages = {
