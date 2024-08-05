@@ -34,9 +34,7 @@
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: scroll;
-      /* 모바일 성능 개선 */
       overflow-x: hidden;
-      /* 가로 스크롤 방지 */
     }
   
     .project-card {
@@ -350,8 +348,6 @@
     }
   
     @media (max-width: 64rem) {
-  
-      /* 태블릿 대응 추가 */
       .project-card {
         margin: 3rem;
         height: auto;
@@ -387,16 +383,12 @@
       .project-card-name {
         grid-area: name;
         padding: 1rem;
-        /* 전체적인 패딩 추가 */
       }
   
       .project-content {
         padding: 0 1rem;
-        /* 좌우 여백 추가 */
         font-size: 0.9rem;
-        /* 글자 크기 조정 */
         line-height: 1.5;
-        /* 줄 간격 조정 */
       }
   
       .project-card-icons {
@@ -479,7 +471,6 @@
       }
     }
   
-    /* 포커스 가능한 요소에 대한 스타일 일관성 */
     a:focus,
     button:focus,
     input:focus,
@@ -489,7 +480,6 @@
       outline-offset: 2px;
     }
   
-    /* 접근성 개선을 위한 추가 스타일 */
     .project-content,
     .project-content-detail,
     .project-card-ex {
